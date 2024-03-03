@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: white;
+  background:violet;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -41,4 +46,15 @@
 
 .p:hover {
   background: linear-gradient(to left, pink, violet);
+}
+
+.footer{
+  height: auto;
+}
+
+
+.list a{
+  font-size: larger;
+  cursor: pointer;
+ 
 }
