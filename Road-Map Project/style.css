@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: white;
+  background:violet;
+}
+
 
 .h3 {
   color: #316ff6 !important;
@@ -71,9 +76,13 @@ i {
   color: #316ff6;
 }
 
-.header img {
-  pointer-events: none;
+.logo-box img{
+  cursor: pointer;
   width: 50px;
+}
+
+.logo-box h3{
+  cursor: pointer;
 }
 
 .user {

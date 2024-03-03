@@ -16,10 +16,11 @@
 
 <body>
   <div class="container">
-    <div class="header d-flex position-absolute">
-      <img src="./assets/icon.png" class="" alt="" />
-      <h3 class="pt-3 ms-2 text-primary">ROAD-MAP</h3>
-    </div>
+    <div class="header">
+      <div class="logo-box d-flex" onclick="home()">
+        <img src="./assets/icon.png" class="" alt="" />
+        <h3 class="pt-3 ms-2 text-primary">ROAD-MAP</h3>
+      </div>
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-md-5 p-4 mt-5 mb-3">
         <img src="./assets/user img.png" class="user position-absolute" alt="" />
@@ -93,6 +94,10 @@
     });
     return userExist;
 
+  }
+
+  function home(){
+    location.href = "./fe.html";
   }
 </script>
 

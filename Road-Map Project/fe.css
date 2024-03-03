@@ -20,9 +20,13 @@
   font-size: larger;
 }
 
-.header img {
-  pointer-events: none;
+.logo-box img{
+  cursor: pointer;
   width: 50px;
+}
+
+.logo-box h3{
+  cursor: pointer;
 }
 
 .row4 .p {
@@ -57,4 +61,20 @@
   font-size: larger;
   cursor: pointer;
  
+}
+
+.about p{
+  font-size: ;
+}
+
+@media only screen and (max-width: 720px) {
+  .gen{
+    position: relative;
+    left: 35px;
+    width: auto;
+  }
+
+  .about{
+    margin-top: 30px;
+  }
 }

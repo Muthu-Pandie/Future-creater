@@ -14,7 +14,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="logo-box d-flex">
+      <div class="logo-box d-flex" onclick="home()">
         <img src="./assets/icon.png" class="" alt="" />
         <h3 class="pt-3 ms-2 text-primary">ROAD-MAP</h3>
       </div>
@@ -136,25 +136,48 @@
   <hr />
   <div class="footer  p-5 bg-primary text-white">
     <div class="row">
-      <div class="col-xxl-3">
+      <div class="col-xxl-3 others gen">
         <h2>Other Road-Maps</h3>
-        <div class="list-box mt-2 d-flex">
-          <div class="list d-flex flex-column">
-            <a><b>Front-End</b><a>
-                <a>HTML</a>
-                <a>CSS</a>
-                <a>JavaScript</a>
+          <div class="list-box mt-2 d-flex">
+            <div class="list d-flex flex-column">
+              <a><b>Front-End</b><a>
+                  <a>HTML</a>
+                  <a>CSS</a>
+                  <a>JavaScript</a>
+            </div>
+            <div class="list d-flex flex-column mx-5">
+              <a><b>Back-End</b></a>
+              <a>Java</a>
+              <a>MySQL</a>
+              <a>API</a>
+            </div>
           </div>
-          <div class="list d-flex flex-column mx-5">
-            <a><b>Back-End</b></a>
-            <a>Java</a>
-            <a>MySQL</a>
-            <a>API</a>
-          </div>
+      </div>
+      <div class="col-xxl-6 about gen">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt provident voluptatum in culpa sit error
+          quaerat, officia tempore enim maxime? Ratione atque itaque velit non nesciunt quia. Repudiandae, impedit
+          autem.</p>
+      </div>
+      <div class="col-xxl-3">
+        <div class="list d-flex flex-column about gen">
+          <a><b>Contact Us</b></a>
+          <a><b>Email :</b> sample@gmail.com</a>
+          <a><b>Help-center : </b>95******24</a>
+          <a><b>Address : </b> State, District, City, Village </a>
         </div>
       </div>
     </div>
   </div>
+  <div class="copy-rights text-center py-4 text-white" style="background-color: blue;">
+    <b>© Copyright 2021-2024 www.Road-Map.com. All rights reserved. Developed by Astronet.</b>
+  </div>
+
 </body>
+<script>
+  function home() {
+    location.href = "./fe.html";
+  }
+</script>
 
 </html>
