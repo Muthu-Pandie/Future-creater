@@ -54,6 +54,7 @@ a:hover{
   background: linear-gradient(to right, pink, violet);
   cursor: pointer;
   font-size: larger;
+  border: 2px solid white;
 }
 
 .p:hover {
