@@ -56,6 +56,17 @@
   height: auto;
 }
 
+.list-box {
+  display: flex;
+  justify-content:space-between;  
+  max-width:250px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .list a{
   font-size: larger;
@@ -68,10 +79,16 @@
 }
 
 @media only screen and (max-width: 720px) {
-  .gen{
-    position: relative;
-    left: 35px;
-    width: auto;
+    .gen, .list{
+      width:100%;
+    }
+
+    .list-box{
+      max-width: 350px;
+    }
+
+  .row{
+    text-align: center;
   }
 
   .about{
