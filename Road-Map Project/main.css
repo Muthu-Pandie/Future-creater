@@ -6,7 +6,7 @@
 
 ::selection {
   color: white;
-  background:violet;
+  background: violet;
 }
 
 .header {
@@ -20,12 +20,12 @@
   font-size: larger;
 }
 
-.logo-box img{
+.logo-box img {
   cursor: pointer;
   width: 50px;
 }
 
-.logo-box h3{
+.logo-box h3 {
   cursor: pointer;
 }
 
@@ -38,12 +38,12 @@
   justify-content: space-between;
 }
 
-a{
+a {
   color: white;
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color: #ccc;
 }
 
@@ -51,24 +51,25 @@ a:hover{
   width: 280px;
   height: 50px;
   color: white;
-  background: linear-gradient(to right, pink, violet);
+  background: linear-gradient(to right, rgb(86, 230, 255), #316ff6);
   cursor: pointer;
   font-size: larger;
+  border-radius: 5px;
   border: 2px solid white;
 }
 
 .p:hover {
-  background: linear-gradient(to left, pink, violet);
+  background: linear-gradient(to left, rgb(86, 230, 255), #316ff6);
 }
 
-.footer{
+.footer {
   height: auto;
 }
 
 .list-box {
   display: flex;
-  justify-content:space-between;  
-  max-width:250px;
+  justify-content: space-between;
+  max-width: 250px;
 }
 
 .list {
@@ -77,39 +78,41 @@ a:hover{
 }
 
 
-.list a{
+.list a {
   font-size: larger;
   cursor: pointer;
- 
+
 }
 
-.about p{
+.about p {
   font-size: larger;
 }
 
 @media only screen and (max-width: 720px) {
-    .gen, .list{
-      width:100%;
-    }
 
-    .col{
-      display: flex;
-      flex-direction: column;
-    }
+  .gen,
+  .list {
+    width: 100%;
+  }
 
-    .col p{
-      width: 100%;
-    }
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .list-box{
-      max-width: 350px;
-    }
+  .col p {
+    width: 100%;
+  }
 
-  .row{
+  .list-box {
+    max-width: 350px;
+  }
+
+  .row {
     text-align: center;
   }
 
-  .about{
+  .about {
     margin-top: 30px;
   }
 }
