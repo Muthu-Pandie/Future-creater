@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.h3 {
+  color: #316ff6 !important;
+}
+
+.row {
+  height: 100vh;
+}
+
+p {
+  font-weight: 500;
+}
+
+.col-md-5 {
+  backdrop-filter: blur(5px) !important;
+  background: #eeeded;
+  border-radius: 10px;
+}
+
+.form-control:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-bottom: 1.5px solid #316ff6 !important;
+}
+
+.form-control {
+  border-radius: 0 !important;
+  border: 0 !important;
+  border-bottom: 1.5px solid #316ff6 !important;
+  background: transparent !important;
+}
+
+.form-outline1 i {
+  pointer-events: none;
+  position: relative;
+  bottom: 32px;
+  left: 15px;
+}
+.form-outline2 i {
+  font-size: larger;
+  pointer-events: none;
+  position: relative;
+  bottom: 32px;
+  left: 18px;
+}
+
+.btn {
+  background-color: #316ff6 !important;
+  width: 200px;
+  color: white !important;
+  font-size: 1.2rem !important;
+}
+
+.btn:hover {
+  box-shadow: inset 2px 1px 20px #03246a;
+}
+
+.footer a:hover {
+  color: grey !important;
+  transition: 0.5s;
+}
+
+i {
+  color: #316ff6;
+}
+
+.header img {
+  pointer-events: none;
+  width: 50px;
+}
+
+.user {
+  pointer-events: none;
+  width: 100px;
+  top: -15%;
+  left: 38.6%;
+}
+
+label {
+  font-weight: bold;
+}
