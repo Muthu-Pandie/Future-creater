@@ -29,10 +29,10 @@
         <p class="p d-flex justify-content-center align-items-center p-3" onclick="html1()">
           HTML
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3" onclick="css2()">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="css1()">
           CSS
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3" onclick="js3()">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="js1()">
           Javascript
         </p>
       </div>
@@ -40,7 +40,7 @@
     <!-- HTML CONTENT START -------------------------------------->
     <div class="content p-5" id="html">
       <span id="cross" onclick="undo()">╳</span>
-      <h4>HTML</h4>
+      <h4 class="bg-warning p-3 text-center">HTML</h4>
       <p>HTML, or Hypertext Markup Language, is the standard markup language for creating web pages and web
         applications. It provides a structure for the content on a webpage by using a series of elements, which are
         represented by tags enclosed in angle brackets <>. HTML tags tell the browser how to display the content,
@@ -48,11 +48,11 @@
       <p><b>1. Elements:</b> HTML documents are made up of elements, which are the building blocks of the webpage. Each
         element
         consists of an opening tag, content, and a closing tag. For example:
-      <p class="text-center bg-warning p-2">&lt;p&gt;This is a paragraph in HTML.&lt;/p&gt;</p>
+      <p class="text-center bg-secondary text-white p-2">&lt;p&gt;This is a paragraph in HTML.&lt;/p&gt;</p>
       </p>
       <p><b>2. Attributes:</b> HTML elements can have attributes that provide additional information about the element.
         Attributes are specified within the opening tag and usually come in name-value pairs. For example:
-      <p class="text-center bg-warning p-2">&lt;a href=""&gt;Attributes in HTML&lt;/a&gt;</p>
+      <p class="text-center bg-secondary text-white p-2">&lt;a href=""&gt;Attributes in HTML&lt;/a&gt;</p>
       </p>
       <p><b>3. Tags:</b> HTML tags define the structure and content of the webpage. Some common tags include:
       <ul>
@@ -76,7 +76,7 @@
     <!-- CSS CONTENT START --------------------------------->
     <div class="content p-5" id="css">
       <span id="cross" onclick="undo()">╳</span>
-      <h4>CSS</h4>
+      <h4 class="bg-warning p-3 text-center">CSS</h4>
       <p>CSS stands for Cascading Style Sheets. It is a style sheet language used to describe the presentation of a
         document written in a markup language like HTML. CSS defines how HTML elements should be displayed on screen, in
         print, or in other media types. It enables web developers to control the layout, colors, fonts, spacing, and
@@ -111,7 +111,7 @@
     <!-- JS CONTENT START --------------------------------->
     <div class="content p-5" id="js">
       <span id="cross" onclick="undo()">╳</span>
-      <h4>JavaScript</h4>
+      <h4 class="bg-warning p-3 text-center">JavaScript</h4>
       <p>JavaScript is a high-level, interpreted programming language primarily used for building dynamic and
         interactive websites. It is one of the core technologies of the World Wide Web, alongside HTML (Hypertext Markup
         Language) and CSS (Cascading Style Sheets). JavaScript allows developers to add functionality to web pages,
@@ -163,7 +163,7 @@
     <!-- GIT CONTENT START ------------------------------------->
     <div class="content p-5" id="git">
       <span id="cross" onclick="undo()">╳</span>
-      <h4>GIT</h4>
+      <h4 class="bg-warning p-3 text-center">GIT</h4>
       <p> Git is a distributed version control system that enables developers to track changes, collaborate effectively,
         manage branches, and maintain the integrity of their codebase throughout the software development lifecycle.
       </p>
@@ -202,7 +202,7 @@
     <div class="row mb-5">
       <div class="h4 mb-4">Package Manager</div>
       <div class="col">
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="npm1()">
           npm
         </p>
         <p class="p d-flex justify-content-center align-items-center p-3">
@@ -213,8 +213,47 @@
         </p>
       </div>
     </div>
+    <!-- npm CONTENT START ------------------------------------->
+    <div class="content p-5" id="npm">
+      <span id="cross" onclick="undo()">╳</span>
+      <h4 class="bg-warning p-3 text-center">NPM</h4>
+      <p>NPM (Node Package Manager) is a package manager for Node.js, a runtime environment for executing JavaScript
+        code outside a web browser. While Git is a version control system that helps developers manage changes to their
+        codebase, NPM complements Git by providing a way to manage project dependencies, scripts, and configurations.
+        Here's why NPM is commonly used alongside Git:</p>
+      <b>Dependency Management :</b>
+      <p>NPM simplifies the process of managing project dependencies, such as libraries, frameworks, and tools.
+        Developers can define dependencies in a package.json file, specifying the required packages and their versions.
+        NPM can then automatically download and install these dependencies from the NPM registry, ensuring that all team
+        members have access to the same set of dependencies.</p>
+      <b>Script Execution :</b>
+      <p>: NPM allows developers to define custom scripts in the package.json file, which can be executed using the npm
+        run command. These scripts can automate common tasks such as building, testing, linting, and deploying the
+        project. By centralizing scripts in the package.json file, developers can easily share and execute them across
+        different environments.</p>
+      <b>Version Management :</b>
+      <p>NPM helps manage package versions by allowing developers to specify version ranges or use semantic versioning
+        (SemVer) for dependencies. This ensures that projects remain compatible with specific versions of packages and
+        can easily upgrade to newer versions without breaking existing functionality. Git, on the other hand, manages
+        versions at the repository level, tracking changes to files and directories over time.</p>
+      <b>Registry Integration : </b>
+      <p> NPM provides access to a vast ecosystem of open-source packages available on the NPM registry. Developers can
+        publish their own packages to the registry and consume packages published by others. Git repositories often
+        contain configuration files, source code, and documentation, whereas NPM packages contain reusable libraries and
+        modules that can be easily shared and reused across projects.</p>
+      <b>Continuous Integration and Deployment (CI/CD) :</b>
+      <p>NPM integrates with CI/CD pipelines, enabling automated testing, building, and deployment of projects. CI/CD
+        tools such as Jenkins, Travis CI, and GitHub Actions can use NPM to install dependencies and execute scripts as
+        part of the build process. This helps streamline development workflows and ensures consistent build environments
+        across different stages of the development lifecycle.</p>
+    </div>
+
+
+    <!-- npm CONTENT END ------------------------------------->
 
     <!-- Version Control - Git END --------------------------------------------------->
+
+    <!-- CSS PREPROCESSOR START ------------------------------------------------------>
     <hr />
     <div class="row mb-5">
       <div class="h4 mb-4">CSS Preprocessor</div>
@@ -226,7 +265,7 @@
           least one CSS Preprocessor.</b>
       </p>
       <div class="col">
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="sass1()">
           SASS
         </p>
         <p class="p d-flex justify-content-center align-items-center p-3">
@@ -240,6 +279,45 @@
         </p>
       </div>
     </div>
+    <!-- SASS CONTENT START ------------------------------------->
+    <div class="content p-5" id="sass">
+      <span id="cross" onclick="undo()">╳</span>
+      <h4 class="bg-warning p-3 text-center">SASS</h4>
+      <p>Sass (Syntactically Awesome Style Sheets) is a preprocessor scripting language that extends CSS with additional
+        features like variables, nesting, mixins, functions, and more. While CSS is powerful on its own, Sass enhances
+        the capabilities of CSS and offers several benefits for web developers</p>
+      <b>Variables :</b>
+      <p>Sass allows developers to define variables to store values that are reused throughout the stylesheet. This
+        makes it easier to maintain consistency and make global style changes. For example, instead of hardcoding colors
+        or font sizes multiple times, developers can define variables such as $primary-color or $font-size.</p>
+      <b>Nesting :</b>
+      <p>Sass supports nesting of CSS selectors, allowing developers to write more concise and readable stylesheets.
+        Instead of repeating parent selectors for nested elements, developers can nest child selectors inside their
+        parent selectors, making the stylesheet structure more intuitive and easier to understand.</p>
+      <b>Mixins :</b>
+      <p>Mixins in Sass enable developers to define reusable blocks of CSS styles that can be included in multiple
+        selectors. Mixins can accept parameters, making them versatile for generating different styles based on input
+        values. This reduces code duplication and makes it easier to maintain consistent styles across the project.</p>
+      <b>Functions :</b>
+      <p> Sass provides built-in functions and allows developers to define custom functions for manipulating values,
+        performing calculations, and generating dynamic styles. Functions add flexibility to stylesheet development and
+        enable more advanced styling techniques.</p>
+      <b>Partials and Imports :</b>
+      <p>Sass supports splitting stylesheets into smaller, modular files called partials. Each partial can contain a
+        subset of styles related to a specific component or feature. Sass also allows developers to import partials into
+        a main stylesheet, making it easier to organize and manage large codebases.</p>
+      <b>Extend/Inheritance :</b>
+      <p> Sass supports the @extend directive, which allows selectors to inherit styles from other selectors. This
+        promotes code reuse and helps keep styles DRY (Don't Repeat Yourself). However, it's important to use @extend
+        judiciously to avoid generating inefficient or bloated CSS output.</p>
+      <b>Compatibility :</b>
+      <p>Sass is compatible with all versions of CSS, meaning that developers can gradually introduce Sass features into
+        existing CSS codebases without requiring a complete rewrite. Sass files can be compiled into standard CSS using
+        a compiler or preprocessor, ensuring compatibility with all web browsers.</p>
+    </div>
+    <!-- SASS CONTENT START ------------------------------------->
+    <!-- CSS PREPROCESSOR END ------------------------------------------------------>
+    <!-- CSS FRAMEWORKS START ------------------------------------------------------>
     <hr />
     <div class="row mb-5">
       <div class="h2">Frameworks</div>
@@ -252,7 +330,7 @@
       </p>
       <div class="h4 mb-4">CSS Frameworks</div>
       <div class="col">
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="bs1()">
           BootStrap
         </p>
         <p class="p d-flex justify-content-center align-items-center p-3">
@@ -263,10 +341,54 @@
         </p>
       </div>
     </div>
+    <!-- BOOTSTRAP CONTENT START ------------------------------------->
+    <div class="content p-5" id="bs">
+      <span id="cross" onclick="undo()">╳</span>
+      <h4 class="bg-warning p-3 text-center">BootStrap</h4>
+      <p>Bootstrap is a popular front-end framework that simplifies the process of building responsive, mobile-first web
+        applications. It provides developers with a collection of pre-designed components, layouts, and utilities, along
+        with a responsive grid system and extensive CSS styling. Here are several reasons why Bootstrap is commonly used
+        in web development</p>
+      <b>Responsive Design :</b>
+      <p>Bootstrap's grid system enables developers to create responsive layouts that adapt to different screen sizes
+        and devices. By using predefined grid classes, developers can easily create multi-column layouts that scale
+        appropriately on desktops, tablets, and smartphones, improving the overall user experience across various
+        devices.</p>
+      <b>Cross-Browser Compatibility :</b>
+      <p>Bootstrap ensures consistency and compatibility across different web browsers by providing CSS styles and
+        JavaScript components that are thoroughly tested and supported on all major browsers. This helps developers
+        avoid browser-specific CSS hacks and ensures a consistent user experience for all website visitors.</p>
+      <b>Pre-designed Components : </b>
+      <p> Bootstrap offers a wide range of UI components, including buttons, forms, navigation bars, dropdowns, modals,
+        carousels, and more. These pre-designed components save developers time and effort by providing ready-to-use
+        solutions for common UI elements, reducing the need to build them from scratch.</p>
+      <b>Customization :</b>
+      <p>While Bootstrap provides a default set of styles and components, it also allows for extensive customization.
+        Developers can easily customize Bootstrap themes, colors, typography, and components using Sass variables and
+        mixins, or by overriding default styles with custom CSS. This flexibility enables developers to create unique
+        and branded designs while still leveraging Bootstrap's core functionality.</p>
+      <b>Community and Ecosystem : </b>
+      <p>Bootstrap has a large and active community of developers, designers, and contributors who regularly contribute
+        to the framework's development, share resources, and provide support through forums, documentation, and
+        tutorials. Additionally, Bootstrap integrates seamlessly with other popular front-end tools and libraries, such
+        as jQuery and Font Awesome, further expanding its capabilities and ecosystem.</p>
+      <b>Rapid Prototyping :</b>
+      <p> Bootstrap is well-suited for rapid prototyping and iterative development. Its ready-made components and
+        responsive grid system enable developers to quickly create functional prototypes and iterate on designs without
+        spending time on low-level CSS styling. This accelerates the development process and allows teams to gather
+        feedback early in the design and development cycle.</p>
+      <b>Accessibility :</b>
+      <p>Bootstrap emphasizes accessibility by providing built-in features and best practices for creating accessible
+        web applications. It includes ARIA roles and attributes, keyboard navigation support, and focus management for
+        interactive components, ensuring that websites built with Bootstrap are accessible to users with disabilities
+        and comply with accessibility standards.</p>
+    </div>
+
+    <!-- BOOTSTRAP CONTENT END ------------------------------------->
     <div class="row mb-5">
       <div class="h4 mb-4">JS Frameworks</div>
       <div class="col">
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="rj1()">
           React
         </p>
         <p class="p d-flex justify-content-center align-items-center p-3">
@@ -277,25 +399,239 @@
         </p>
       </div>
     </div>
+    <!-- REACT CONTENT START ------------------------------------->
+    <div class="content p-5" id="rj">
+      <span id="cross" onclick="undo()">╳</span>
+      <h4 class="bg-warning p-3 text-center">BootStrap</h4>
+      <p>React.js is a JavaScript library developed by Facebook for building user interfaces, particularly for
+        single-page applications and complex user interfaces. It has gained widespread adoption in the web development
+        community due to several key features and benefits</p>
+      <b>Component-Based Architecture :</b>
+      <p>React.js uses a component-based architecture, allowing developers to break down the user interface into
+        reusable and encapsulated components. This modular approach makes it easier to build and maintain large-scale
+        applications, as each component can be developed, tested, and debugged independently.</p>
+      <b>Virtual DOM :</b>
+      <p>React.js uses a virtual DOM (Document Object Model), a lightweight representation of the actual DOM tree. When
+        changes are made to the UI, React updates the virtual DOM first, compares it with the previous version, and then
+        efficiently updates only the necessary parts of the actual DOM. This approach minimizes browser reflows and
+        improves performance, especially in applications with dynamic data and frequent UI updates.</p>
+      <b>Declarative Syntax :</b>
+      <p>React.js uses a declarative syntax, allowing developers to describe how the UI should look based on the
+        application's current state. Instead of imperatively manipulating the DOM to update UI elements, developers
+        define the desired UI state using JSX (JavaScript XML) syntax, which is more intuitive and easier to understand.
+        This leads to more predictable code and reduces the risk of bugs caused by manual DOM manipulation.</p>
+      <b>JSX :</b>
+      <p> JSX is a syntax extension for JavaScript that allows developers to write HTML-like code within JavaScript
+        files. It seamlessly integrates HTML markup with JavaScript logic, making it easier to create and maintain UI
+        components. JSX is transpiled into regular JavaScript code by tools like Babel, enabling developers to leverage
+        the full power of JavaScript while building UIs.</p>
+      <b>Reusable Components : </b>
+      <p> React.js promotes the reuse of components, allowing developers to create modular and composable UIs.
+        Components can be composed together to build complex user interfaces, and they can be reused across different
+        parts of the application or even in multiple applications. This improves code maintainability, reduces
+        duplication, and speeds up development.</p>
+      <b>Unidirectional Data Flow : </b>
+      <p>React.js follows a unidirectional data flow model, where data flows down from parent components to child
+        components via props (properties). This makes it easier to reason about data flow and maintain consistency
+        within the application. Additionally, React provides mechanisms like state management and context API to manage
+        application state and share data between components.</p>
+      <b>Large Ecosystem and Community :</b>
+      <p>React.js has a large and active community of developers, who contribute to its ecosystem by creating libraries,
+        tools, and resources to enhance productivity and solve common challenges. There are numerous third-party
+        libraries, frameworks, and UI component libraries available for React, providing developers with a wide range of
+        options for building modern web applications.</p>
+    </div>
+    <!-- REACT CONTENT END --------------------------------------->
+    <!-- CSS FRAMEWORKS END ------------------------------------------------------>
     <hr>
+    <!-- INTERTNET  STRAT ------------------------------------------------------>
     <div class="row mb-5">
-      <div class="h2">Internet</div>
+      <div class="h2">Internet & Security</div>
       <p>
         The internet is a global network connecting computers worldwide. It allows people to share information,
         communicate, and access various services and content through devices like computers and smartphones.
       </p>
       <div class="col">
-        <p class="p d-flex justify-content-center align-items-center p-2">
+        <p class="p d-flex justify-content-center align-items-center p-2" onclick="inter1()">
           Internet
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="auth1()">
           Authentication
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-2">
-          Security
+        <p class="p d-flex justify-content-center align-items-center p-2" onclick="sec1()">
+          web Security
         </p>
       </div>
     </div>
+    <!-- INTERNET CONTENT START --------------------------------------->
+    <div class="content p-5" id="inter">
+      <span id="cross" onclick="undo()">╳</span>
+      <h4 class="bg-warning p-3 text-center">INTERNET</h4>
+      <b>What is domain name ?</b>
+      <p>A domain name is a human-readable label that serves as an easy-to-remember address for locating resources on
+        the internet. It is used to identify and locate specific websites, web pages, email servers, and other internet
+        resources. Domain names are part of the Domain Name System (DNS), which acts as a decentralized directory system
+        for mapping domain names to their corresponding IP addresses.</p>
+      <b>Web Server</b>
+      <p>A web server is a software application or hardware device that serves web content to clients over the internet
+        or an intranet. It responds to requests from web browsers or other clients, delivering web pages, files, or
+        other resources in response to those requests. Web servers play a crucial role in the functioning of the World
+        Wide Web by hosting and delivering websites and web applications to users worldwide.</p>
+      <b>Client Server Architecture</b>
+      <p>Client-server architecture is a computing model that divides tasks or processes between clients and servers in
+        a networked environment. In this architecture, clients and servers communicate with each other to accomplish
+        various tasks, such as accessing resources, sharing data, or processing requests. </p>
+      <b>URI/URL</b>
+      <ul class="mt-2"><b>URI (Uniform Resource Identifier):</b>
+        <li>A URI is a string of characters used to identify a resource on the internet.</li>
+        <li> It can identify various types of resources, including web pages, files, images, services, and more.</li>
+        <li> URIs can be further classified into two subtypes: URLs and URNs (Uniform Resource Names).</li>
+      </ul>
+      <ul class="mt-2"><b>URL (Uniform Resource Locator) :</b>
+        <li>A URL is a specific type of URI that provides the means to locate and access a resource on the internet.
+        </li>
+        <li>It typically consists of several components, including the protocol (e.g., HTTP, HTTPS), domain name or IP
+          address, path, query parameters, and fragment identifier.</li>
+        <li>URLs are commonly used to specify the address of web pages, files, and other resources on the World Wide
+          Web.</li>
+      </ul>
+      <b>What is DNS?</b>
+      <p>DNS stands for Domain Name System. It is a hierarchical decentralized naming system for computers, services, or
+        any resource connected to the Internet or a private network. DNS translates human-readable domain names (such as
+        example.com) into the numerical IP addresses (such as 192.0.2.1) that computers use to identify each other on
+        the network.</p>
+      <b>HTTP</b>
+      <P>HTTP (Hypertext Transfer Protocol) is an application-layer protocol used for transmitting hypermedia documents,
+        such as HTML files, over the World Wide Web. It defines how messages are formatted and transmitted between web
+        servers and web clients, enabling the exchange of data and communication between them.</P>
+      <b>HTTP Cookies and Session</b>
+      <ul class="mt-2"><b>HTTP Cookies :</b>
+        <li>HTTP cookies are small pieces of data sent from a web server to a web client and stored locally on the
+          client's device (usually in the browser).</li>
+        <li>Cookies are typically used to store information such as user preferences, session identifiers,
+          authentication tokens, and shopping cart contents.</li>
+        <li>Cookies consist of key-value pairs and optional attributes such as expiration date, domain, and path.</li>
+        <li>When a web client makes subsequent requests to the same server, it sends the stored cookies along with the
+          request headers, allowing the server to retrieve and use the stored information.</li>
+        <li>Cookies can be either session cookies (stored temporarily and deleted when the browser session ends) or
+          persistent cookies (stored on the client's device for a specified duration).</li>
+        <li>Cookies are commonly used for tracking user activity, implementing user authentication, and personalizing
+          content for individual users.</li>
+      </ul>
+      <ul class="mt-2"><b>HTTP Sessions :</b>
+        <li>Sessions are server-side data structures used to maintain stateful interactions between a web server and a
+          specific client over a series of HTTP requests and responses.</li>
+        <li>When a client establishes a session with a server (usually after successful authentication), the server
+          generates a unique session identifier (session ID) and stores session-related data on the server.</li>
+        <li>The session ID is typically stored as a cookie on the client's device, allowing the client to send the
+          session ID along with subsequent requests to the server.</li>
+        <li>On the server side, the session ID is used to retrieve session data associated with the client from the
+          server's session storage.</li>
+        <li>Session data can include user authentication status, user-specific settings, shopping cart contents, and
+          other temporary information needed for the duration of the session.</li>
+        <li>Sessions are typically used for managing user authentication and maintaining user-specific state across
+          multiple requests within a single browsing session.</li>
+      </ul>
+      <b>Browsers and how it work’s</b>
+      <p>Web browsers are software applications that allow users to access and interact with information on the World
+        Wide Web. They interpret HTML, CSS, and JavaScript code to render web pages, and they provide features such as
+        navigation tools, bookmarking, and extensions.</p>
+      <b>Web Hosting</b>
+      <p>Web hosting is a service provided by companies known as web hosts or hosting providers, wherein they allocate
+        server space and resources to store and serve website files and content to users over the internet. In simpler
+        terms, web hosting enables individuals and organizations to make their websites accessible online.</p>
+      <b>Web Deployment</b>
+      <p>Web deployment refers to the process of making a web application or website accessible to users over the
+        internet or an intranet. It involves setting up the necessary infrastructure, configuring servers, deploying
+        application code, and ensuring the availability and reliability of the web application for end users. </p>
+    </div>
+    <!-- INTERNET CONTENT END --------------------------------------->
+    <!-- Authentication CONTENT START --------------------------------------->
+    <div class="content p-5" id="auth">
+      <span id="cross" onclick="undo()">╳</span>
+      <h4 class="bg-warning p-3 text-center">Authentication</h4>
+      <p>Authentication is the process of verifying the identity of an individual, system, or entity attempting to
+        access a particular resource or service. It ensures that the user or system is who or what they claim to be
+        before granting access. Authentication is crucial for maintaining security and controlling access to sensitive
+        information or systems.</p>
+      <b>Username and Password </b>
+      <p><b>Username :</b> A username is a unique identifier chosen by the user during the registration process. It's
+        typically
+        a string of characters that helps distinguish one user from another. Usernames are often displayed publicly
+        within a system, such as on a profile page or when interacting with other users.</p>
+      <p><b>Password :</b>A password is a confidential string of characters chosen by the user to prove their identity.
+        It acts as a secret key that only the user should know. Passwords are kept private and should not be shared with
+        others. They are used to authenticate the user's identity during login attempts.</p>
+      <b>OAuth :</b>
+      <p>OAuth (Open Authorization) is an open standard for access delegation commonly used as a means for websites or
+        applications to grant third-party access to resources without sharing passwords. It enables users to grant
+        access to their resources stored on one site to another site, without sharing their credentials (such as
+        username and password). OAuth is widely used by major companies like Google, Facebook, Twitter, and others to
+        allow users to grant third-party access to their information.</p>
+      <b>Multi-Factor Authentication (MFA) :</b>
+      <p>Multi-Factor Authentication (MFA) is an authentication method that requires users to provide two or more
+        different factors to verify their identity before granting access to a system, application, or service. MFA adds
+        an extra layer of security beyond just a username and password combination, making it more difficult for
+        unauthorized users to gain access.</p>
+      <b>JSON Web Tokens (JWT) :</b>
+      <p>JSON Web Tokens (JWT) are a compact, URL-safe means of representing claims to be transferred between two
+        parties. They are designed to be easy to use for both clients and servers, and they allow information to be
+        verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm)
+        or a public/private key pair using RSA or ECDSA.</p>
+      <b>Session-based Authentication :</b>
+      <p>Session-based authentication is a method used by web applications to manage user authentication and
+        authorization. It relies on the concept of sessions, which are temporary storage areas created on the server to
+        store user-specific information during a user's interaction with the application.</p>
+      <b>Time-based One-Time Passwords (TOTP) :</b>
+      <p>Time-based One-Time Passwords (TOTP) are a type of two-factor authentication (2FA) method commonly used to
+        enhance the security of online accounts and systems. TOTP relies on the generation of unique, time-based codes
+        that are valid for only a short period of time and require the use of a shared secret between the user and the
+        service provider.</p>
+      <b>Passwordless Authentication :</b>
+      <p>Passwordless authentication is a method of verifying a user's identity without requiring them to enter a
+        traditional password. Instead of relying solely on something the user knows (i.e., a password), passwordless
+        authentication methods typically use something the user has (e.g., a mobile device, email address) or something
+        the user is (e.g., biometric data) to authenticate.</p>
+      <b>Brute Force Protection :</b>
+      <p>Brute force protection is a set of security measures implemented to prevent or mitigate brute force attacks. In
+        a brute force attack, an attacker systematically tries all possible combinations of usernames, passwords, or
+        encryption keys until the correct one is found. Brute force attacks are typically automated and can be used to
+        gain unauthorized access to systems, applications, or accounts.</p>
+    </div>
+    <!-- Authentication CONTENT END --------------------------------------->
+    <!-- SECURITY CONTENT START --------------------------------------->
+    <div class="content p-5" id="sec">
+      <span id="cross" onclick="undo()">╳</span>
+      <h4 class="bg-warning p-3 text-center">Web Security</h4>
+      <p>Web security refers to the protection of websites, web applications, and web services from various online
+        threats, vulnerabilities, and attacks. Ensuring web security is essential for safeguarding sensitive data,
+        maintaining user trust, and preventing unauthorized access or malicious activities. Here are some key aspects of
+        web security:</p>
+      <b> Content Security Policy(CSP) :</b>
+      <p>Content Security Policy (CSP) is a security standard implemented by web browsers to mitigate the risk of
+        cross-site scripting (XSS) attacks and other types of code injection attacks. CSP allows web developers to
+        control and specify the trusted sources of content that can be executed or loaded by a web page, such as
+        scripts, stylesheets, images, fonts, and multimedia resources.</p>
+      <b> Cross-Origin Resource Sharing (CORS) :</b>
+      <p>Cross-Origin Resource Sharing (CORS) is a security feature implemented by web browsers to control how web pages
+        hosted on one domain can access resources (such as API endpoints) hosted on another domain. CORS is enforced by
+        the browser to prevent potential security risks associated with cross-origin requests, such as cross-site
+        request forgery (CSRF) and unauthorized data access.</p>
+      <b>HTTPS :</b>
+      <p>HTTPS (Hypertext Transfer Protocol Secure) is an extension of HTTP that provides secure communication over the
+        internet by encrypting data exchanged between a web browser and a web server. HTTPS uses SSL/TLS protocols to
+        establish a secure connection and ensure the confidentiality, integrity, and authenticity of transmitted data.
+      </p>
+      <b>OWASP Security Risk :</b>
+      <p>The Open Web Application Security Project (OWASP) is a non-profit organization dedicated to improving the
+        security of software. OWASP provides resources, tools, and guidance to help organizations develop, deploy, and
+        maintain secure web applications. One of the key contributions of OWASP is the OWASP Top 10, which is a
+        regularly updated list of the most critical security risks facing web applications. The OWASP Top 10 serves as a
+        guide for developers, security professionals, and organizations to prioritize their efforts in addressing common
+        security vulnerabilities.</p>
+    </div>
+    <!-- SECURITY CONTENT END ----------------------------------------->
+    <!-- INTERTNET END ------------------------------------------------------>
   </div>
   <hr />
   <div class="footer  p-5 bg-primary text-white">
@@ -305,9 +641,9 @@
           <div class="list-box mt-2">
             <div class="list">
               <a href="./fe.html"><b>Front-End</b><a>
-                  <a>HTML</a>
-                  <a>CSS</a>
-                  <a>JavaScript</a>
+                  <a onclick="html1()">HTML</a>
+                  <a onclick="css1()">CSS</a>
+                  <a onclick="js1()">JavaScript</a>
             </div>
             <div class="list">
               <a href="./be.html"><b>Back-End</b></a>
