@@ -140,3 +140,64 @@ function sec1() {
     displaying = 1
   }
 }
+
+var java = document.getElementById("java");
+function java1() {
+
+  if (displaying === 1) {
+    java.style.display = "block";
+    displaying = 0
+  } else {
+    java.style.display = "none";
+    displaying = 1
+  }
+}
+
+
+var py = document.getElementById("py");
+function py1() {
+
+  if (displaying === 1) {
+    py.style.display = "block";
+    displaying = 0
+  } else {
+    py.style.display = "none";
+    displaying = 1
+  }
+}
+
+var php = document.getElementById("php");
+function php1() {
+
+  if (displaying === 1) {
+    php.style.display = "block";
+    displaying = 0
+  } else {
+    php.style.display = "none";
+    displaying = 1
+  }
+}
+
+var mysql = document.getElementById("mysql");
+function mysql1() {
+
+  if (displaying === 1) {
+    mysql.style.display = "block";
+    displaying = 0
+  } else {
+    mysql.style.display = "none";
+    displaying = 1
+  }
+}
+
+var md = document.getElementById("md");
+function md1() {
+
+  if (displaying === 1) {
+    md.style.display = "block";
+    displaying = 0
+  } else {
+    md  .style.display = "none";
+    displaying = 1
+  }
+}
