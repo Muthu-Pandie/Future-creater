@@ -77,81 +77,80 @@ a:hover {
   flex-direction: column;
 }
 
-
 .list a {
   font-size: larger;
   cursor: pointer;
-
 }
 
 .about p {
   font-size: larger;
 }
 
-.content{
+.content {
   background-color: white;
   box-shadow: 2px 2px 5px gray;
   border-radius: 5px;
-  width: 40vw;
-  height: 650px;
-  position:fixed;
+  width: 45vw;
+  height: 87vh;
+  position: fixed;
   right: 1%;
-  top: 15%;
-  z-index: 1;
-  display:none;
-  overflow-y:scroll;
+  top: 13%;
+  display: none;
+  overflow-y: scroll;
   color: black;
 }
 
-.con-img{
+.con-img {
   width: 400px;
   height: auto;
   transform: translateX(50px);
 }
 
-#cross{
-  font-weight:bold;
-  font-size:large;
-  position:absolute;
-  right: 12px;  
+#cross {
+  font-weight: bold;
+  font-size: large;
+  position: absolute;
+  right: 12px;
   top: 5px;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 720px) {
-    .gen, .list{
-      width:100%;
-    }
+  .gen,
+  .list {
+    width: 100%;
+  }
 
-    .col{
-      display: flex;
-      flex-direction: column;
-    }
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .col p{
-      width: 100%;
-    }
+  .col p {
+    width: 100%;
+  }
 
-    .list-box{
-      max-width: 350px;
-    }
+  .list-box {
+    max-width: 350px;
+  }
 
-  .row{
+  .row {
     text-align: center;
   }
 
-  .about{
+  .about {
     margin-top: 30px;
   }
 
-  .content{
+  .content {
+    left: 1px;
     top: 0;
     width: 100vw;
     height: 100vh;
     transform: 2s;
   }
 
-  .con-img{
+  .con-img {
     width: 300px;
     height: auto;
     transform: translateX(0px);

@@ -31,13 +31,13 @@
                     control structures, functions, and object-oriented programming is essential....</b>
             </p>
             <div class="col mt-5">
-                <p class="p d-flex justify-content-center align-items-center p-3" onclick="java1()">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('java')">
                     Java
                 </p>
-                <p class="p d-flex justify-content-center align-items-center p-3" onclick="py1()">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('py')">
                     Python
                 </p>
-                <p class="p d-flex justify-content-center align-items-center p-3" onclick="php1()">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('php')">
                     PHP
                 </p>
             </div>
@@ -66,7 +66,7 @@
             </p>
             <div class="h3 mt-5 mb-3">Relational Databases</div>
             <div class="col">
-                <p class="p d-flex justify-content-center align-items-center p-3" onclick="mysql1()">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('mysql')">
                     MySQL
                 </p>
                 <p class="p d-flex justify-content-center align-items-center p-3">
@@ -78,7 +78,7 @@
             </div>
             <div class="h3 mt-5 mb-3">Non-Relational Databases</div>
             <div class="col">
-                <p class="p d-flex justify-content-center align-items-center p-3" onclick="md1()">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('md')">
                     MongoDB
                 </p>
                 <p class="p d-flex justify-content-center align-items-center p-3">
@@ -99,7 +99,7 @@
                 use them to build web applications and APIs.
             </p>
             <div class="col mt-5">
-                <p class="p d-flex justify-content-center align-items-center p-3">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('sp')">
                     Spring Boot
                 </p>
                 <p class="p d-flex justify-content-center align-items-center p-3">
@@ -139,27 +139,27 @@
                     codes, authentication, and serialization formats like JSON and XML.</b>
             </p>
             <div class="col mt-5">
-                <p class="p d-flex justify-content-center align-items-center p-3">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('api')">
                     RESTful API
                 </p>
-                <p class="p d-flex justify-content-center align-items-center p-3">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('http')">
                     HTTP methods
                 </p>
-                <p class="p d-flex justify-content-center align-items-center p-3">
-                    status
-                    codes
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('status')">
+                    Status
+                    Codes
                 </p>
             </div>
         </div>
         <div class="row mb-5">
             <div class="col">
-                <p class="p d-flex justify-content-center align-items-center p-3">
-                    authentication
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('auth')">
+                    Authentication
                 </p>
-                <p class="p d-flex justify-content-center align-items-center p-3">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('json')">
                     JSON
                 </p>
-                <p class="p d-flex justify-content-center align-items-center p-3">
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('xml')">
                     XML
                 </p>
             </div>
@@ -174,13 +174,13 @@
                     <div class="list-box mt-2">
                         <div class="list">
                             <a href="./fe.html"><b>Front-End</b><a>
-                                    <a onclick="html1()">HTML</a>
-                                    <a onclick="css1()">CSS</a>
-                                    <a onclick="js1()">JavaScript</a>
+                                    <a onclick="content('html')">HTML</a>
+                                    <a onclick="content('css')">CSS</a>
+                                    <a onclick="content('js')">JavaScript</a>
                         </div>
                         <!-- HTML CONTENT START -------------------------------------->
                         <div class="content p-5" id="html">
-                            <span id="cross" onclick="undo()">╳</span>
+                            <span id="cross" onclick="undo('html')">╳</span>
                             <h4 class="bg-warning p-3 text-center">HTML</h4>
                             <p>HTML, or Hypertext Markup Language, is the standard markup language for creating web
                                 pages and web
@@ -228,7 +228,7 @@
                         <!-- HTML CONTENT END --------------------------------->
                         <!-- CSS CONTENT START --------------------------------->
                         <div class="content p-5" id="css">
-                            <span id="cross" onclick="undo()">╳</span>
+                            <span id="cross" onclick="undo('css')">╳</span>
                             <h4 class="bg-warning p-3 text-center">CSS</h4>
                             <p>CSS stands for Cascading Style Sheets. It is a style sheet language used to describe the
                                 presentation of a
@@ -280,7 +280,7 @@
                         <!-- CSS CONTENT END --------------------------------->
                         <!-- JS CONTENT START --------------------------------->
                         <div class="content p-5" id="js">
-                            <span id="cross" onclick="undo()">╳</span>
+                            <span id="cross" onclick="undo('js')">╳</span>
                             <h4 class="bg-warning p-3 text-center">JavaScript</h4>
                             <p>JavaScript is a high-level, interpreted programming language primarily used for building
                                 dynamic and
@@ -322,9 +322,9 @@
                         <!-- HTML CSS JS END -------------------------------------------------------->
                         <div class="list">
                             <a href="./be.html"><b>Back-End</b></a>
-                            <a>Java</a>
-                            <a>MySQL</a>
-                            <a>API</a>
+                            <a onclick="content('java')">Java</a>
+                            <a onclick="content('mysql')">MySQL</a>
+                            <a onclick="content('api')">API</a>
                         </div>
                     </div>
             </div>
@@ -351,7 +351,7 @@
 
     <!-- JAVA CONTENT START---------------------------------------------->
     <div class="content p-5" id="java">
-        <span id="cross" onclick="undo()">╳</span>
+        <span id="cross" onclick="undo('java')">╳</span>
         <h4 class="bg-warning p-3 text-center">Java</h4>
         <p>Java is a widely used, high-level, object-oriented programming language developed by Sun Microsystems
             (now owned by Oracle Corporation). It was first released in 1995 and has since become one of the most
@@ -409,7 +409,7 @@
     <!-- JAVA CONTENT END---------------------------------------------->
     <!-- PYTHON CONTENT START---------------------------------------------->
     <div class="content p-5" id="py">
-        <span id="cross" onclick="undo()">╳</span>
+        <span id="cross" onclick="undo('py')">╳</span>
         <h4 class="bg-warning p-3 text-center">Python</h4>
         <p>Python is a high-level, interpreted programming language known for its simplicity, readability, and
             versatility. Developed in the late 1980s by Guido van Rossum, Python has since become one of the most
@@ -480,7 +480,7 @@
     <!-- PYTHON CONTENT END---------------------------------------------->
     <!-- PHP CONTENT START---------------------------------------------->
     <div class="content p-5" id="php">
-        <span id="cross" onclick="undo()">╳</span>
+        <span id="cross" onclick="undo('php')">╳</span>
         <h4 class="bg-warning p-3 text-center">PHP</h4>
         <p>PHP is a widely used server-side scripting language designed primarily for web development. It was
             created by Rasmus Lerdorf in 1994 and has since evolved into a powerful and versatile language. PHP
@@ -556,7 +556,7 @@
     <!-- PHP CONTENT END---------------------------------------------->
     <!-- MYSQL CONTENT START---------------------------------------------->
     <div class="content p-5" id="mysql">
-        <span id="cross" onclick="undo()">╳</span>
+        <span id="cross" onclick="undo('mysql')">╳</span>
         <h4 class="bg-warning p-3 text-center">MySQL</h4>
         <p>MySQL is an open-source relational database management system (RDBMS) that is widely used for managing
             structured data. It was first released in 1995 by Swedish company MySQL AB and later acquired by Sun
@@ -638,7 +638,7 @@
     <!-- MYSQL CONTENT END---------------------------------------------->
     <!-- MONGODB CONTENT START---------------------------------------------->
     <div class="content p-5" id="md">
-        <span id="cross" onclick="undo()">╳</span>
+        <span id="cross" onclick="undo('md')">╳</span>
         <h4 class="bg-warning p-3 text-center">MongoDB</h4>
         <p>MongoDB is a widely used NoSQL (Not Only SQL) database management system that stores data in a flexible,
             document-based format called BSON (Binary JSON). It is designed for scalability, high performance, and ease
@@ -732,6 +732,573 @@
             </ul>
         </section>
     </div>
+    <!-- MONGODB CONTENT START---------------------------------------------->
+    <!-- SPRING BOOT CONTENT START---------------------------------------------->
+    <div class="content p-5" id="sb">
+        <span id="cross" onclick="undo('sb')">╳</span>
+        <h4 class="bg-warning p-3 text-center">SPRING BOOT</h4>
+        <b>Introduction to Spring Boot:</b>
+        <ul>
+            <li>Key features and benefits.</li>
+            <li>Convention-over-configuration.</li>
+        </ul>
+
+        <b>Spring Boot Starters:</b>
+        <ul>
+            <li>Pre-configured templates.</li>
+            <li>Project setup simplification.</li>
+        </ul>
+
+        <b>Building a Spring Boot Application:</b>
+        <ul>
+            <li>Project creation using Maven or Gradle.</li>
+            <li>Basic application structure.</li>
+        </ul>
+
+        <b>Spring Boot Annotations:</b>
+        <ul>
+            <li>@SpringBootApplication, @RestController, @RequestMapping.</li>
+            <li>Role in simplifying configuration and routing.</li>
+        </ul>
+
+        <b>Dependency Injection in Spring Boot:</b>
+        <ul>
+            <li>Understanding the concept.</li>
+            <li>How Spring Boot manages dependencies.</li>
+        </ul>
+
+        <b>Spring Boot Auto-Configuration:</b>
+        <ul>
+            <li>Auto-configuration principles.</li>
+            <li>Automatic configuration based on dependencies.</li>
+        </ul>
+
+        <b>Spring Boot DevTools:</b>
+        <ul>
+            <li>Features and benefits.</li>
+            <li>Automatic application restarts.</li>
+        </ul>
+
+        <b>Spring Boot Data:</b>
+        <ul>
+            <li>Integration with databases using Spring Data.</li>
+            <li>CRUD operations.</li>
+        </ul>
+
+        <b>Spring Boot RESTful Services:</b>
+        <ul>
+            <li>Creating RESTful web services.</li>
+            <li>@RestController for handling HTTP requests.</li>
+        </ul>
+
+        <b>Spring Boot Security:</b>
+        <ul>
+            <li>Implementation of security features.</li>
+            <li>Authentication and authorization.</li>
+        </ul>
+
+        <b>Security and Authentication:</b>
+        <ul>
+            <li>Securing MongoDB deployment with authentication and authorization.</li>
+            <li>User management: creating users, assigning roles, and managing permissions.</li>
+            <li>Enabling access control features and auditing.</li>
+        </ul>
+
+        <b>Spring Boot Testing:</b>
+        <ul>
+            <li>Writing unit tests and integration tests.</li>
+            <li>Using JUnit and Mockito.</li>
+        </ul>
+
+        <b>Spring Boot Actuator:</b>
+        <ul>
+            <li>Monitoring and managing applications.</li>
+            <li>Health checks, metrics, and endpoints.</li>
+        </ul>
+
+        <b>Spring Boot and Microservices:</b>
+        <ul>
+            <li>Using Spring Boot in a microservices architecture.</li>
+            <li>Service discovery and communication.</li>
+        </ul>
+
+        <b>Deployment and Packaging:</b>
+        <ul>
+            <li>Packaging and deploying Spring Boot applications.</li>
+            <li>Creating executable JARs or WAR files.</li>
+        </ul>
+
+        <b>Documentation and Swagger:</b>
+        <ul>
+            <li>Generating API documentation with Swagger.</li>
+            <li>Documenting Spring Boot APIs.</li>
+        </ul>
+
+        <b>Logging and Error Handling:</b>
+        <ul>
+            <li>Configuring logging.</li>
+            <li>Implementing error handling mechanisms.</li>
+        </ul>
+
+        <b>Advanced Topics:</b>
+        <ul>
+            <li>Spring Boot profiles.</li>
+            <li>Asynchronous programming.</li>
+            <li>Reactive programming with Spring WebFlux.</li>
+        </ul>
+    </div>
+
+    <!-- SPRING BOOT CONTENT END---------------------------------------------->
+    <!-- API CONTENT END---------------------------------------------->
+    <div class="content p-5" id="api">
+        <span id="cross" onclick="undo('api')">╳</span>
+        <h4 class="bg-warning p-3 text-center">RESTFULL API</h4>
+        <b>Introduction to REST:</b>
+        <ul>
+            <li>Overview of Representational State Transfer (REST).</li>
+            <li>Key principles and constraints of RESTful architecture.</li>
+        </ul>
+
+        <b>HTTP Methods in RESTful APIs:</b>
+        <ul>
+            <li>Understanding the role of HTTP methods (GET, POST, PUT, DELETE, etc.).</li>
+            <li>Mapping CRUD operations to HTTP methods.</li>
+        </ul>
+
+        <b>URI Design in RESTful APIs:</b>
+        <ul>
+            <li>Best practices for designing URIs.</li>
+            <li>Resource naming conventions.</li>
+            <li>Hierarchical URI structures.</li>
+        </ul>
+
+        <b>Request and Response in RESTful APIs:</b>
+        <ul>
+            <li>Structure of HTTP requests and responses.</li>
+            <li>Headers, status codes, and message bodies.</li>
+            <li>Handling content types (JSON, XML).</li>
+        </ul>
+
+        <b>RESTful API Authentication:</b>
+        <ul>
+            <li>Authentication methods (Basic Auth, OAuth, JWT).</li>
+            <li>Securing RESTful APIs.</li>
+            <li>Token-based authentication.</li>
+        </ul>
+
+        <b>Versioning in RESTful APIs:</b>
+        <ul>
+            <li>Different strategies for API versioning.</li>
+            <li>Header versioning, URI versioning, and content negotiation.</li>
+        </ul>
+
+        <b>RESTful API Pagination:</b>
+        <ul>
+            <li>Implementing pagination for large datasets.</li>
+            <li>Query parameters for pagination.</li>
+            <li>Hypermedia as the Engine of Application State (HATEOAS).</li>
+        </ul>
+
+        <b>RESTful API Error Handling:</b>
+        <ul>
+            <li>Standardized error responses.</li>
+            <li>HTTP status codes for different scenarios.</li>
+            <li>Providing meaningful error messages.</li>
+        </ul>
+
+        <b>RESTful API Testing:</b>
+        <ul>
+            <li>Unit testing and integration testing of APIs.</li>
+            <li>Tools for API testing (Postman, RestAssured, etc.).</li>
+            <li>Writing effective test cases.</li>
+        </ul>
+
+        <b>RESTful API Documentation:</b>
+        <ul>
+            <li>Importance of documentation in RESTful APIs.</li>
+            <li>Tools for generating API documentation (Swagger, OpenAPI).</li>
+            <li>Writing clear and concise documentation.</li>
+        </ul>
+
+        <b>RESTful API Security:</b>
+        <ul>
+            <li>Common security threats and vulnerabilities.</li>
+            <li>Implementing SSL/TLS.</li>
+            <li>Cross-Origin Resource Sharing (CORS).</li>
+        </ul>
+
+    </div>
+    <!-- API CONTENT START---------------------------------------------->
+    <!-- HTTP CONTENT START---------------------------------------------->
+    <div class="content p-5" id="http">
+        <span id="cross" onclick="undo('http')">╳</span>
+        <h4 class="bg-warning p-3 text-center">HTTP METHODS</h4>
+        <b>Introduction to HTTP Methods:</b>
+        <ul>
+            <li>Overview of HTTP methods (GET, POST, PUT, DELETE, etc.).</li>
+            <li>Understanding the role of HTTP methods in web development.</li>
+        </ul>
+
+        <b>GET Method:</b>
+        <ul>
+            <li>Purpose and characteristics of the GET method.</li>
+            <li>Use cases for retrieving data from the server.</li>
+            <li>Query parameters and their role in GET requests.</li>
+        </ul>
+
+        <b>POST Method:</b>
+        <ul>
+            <li>Purpose and characteristics of the POST method.</li>
+            <li>Use cases for sending data to the server.</li>
+            <li>Request payload and content types in POST requests.</li>
+        </ul>
+
+        <b>PUT and PATCH Methods:</b>
+        <ul>
+            <li>Purpose and differences between the PUT and PATCH methods.</li>
+            <li>Use cases for updating resources on the server.</li>
+            <li>Request payload and content types in PUT and PATCH requests.</li>
+        </ul>
+
+        <b>DELETE Method:</b>
+        <ul>
+            <li>Purpose and characteristics of the DELETE method.</li>
+            <li>Use cases for deleting resources on the server.</li>
+            <li>Handling resource deletion and response codes.</li>
+        </ul>
+
+        <b>HEAD and OPTIONS Methods:</b>
+        <ul>
+            <li>Overview of the HEAD and OPTIONS methods.</li>
+            <li>Use cases and characteristics of these methods.</li>
+            <li>How HEAD and OPTIONS differ from other HTTP methods.</li>
+        </ul>
+    </div>
+    <!-- HTTP CONTENT END---------------------------------------------->
+    <!--  CONTENT START---------------------------------------------->
+    <div class="content p-5" id="json">
+        <span id="cross" onclick="undo('json')">╳</span>
+        <h4 class="bg-warning p-3 text-center">JSON</h4>
+        <b>Introduction to JSON:</b>
+        <ul>
+            <li>Overview of JSON and its purpose.</li>
+            <li>Comparison with other data interchange formats.</li>
+        </ul>
+
+        <b>JSON Syntax:</b>
+        <ul>
+            <li>Basic syntax rules for JSON.</li>
+            <li>Data types supported in JSON (string, number, boolean, array, object, null).</li>
+        </ul>
+
+        <b>JSON Objects:</b>
+        <ul>
+            <li>Understanding JSON objects and their structure.</li>
+            <li>Creating and accessing object properties.</li>
+        </ul>
+
+        <b>JSON Arrays:</b>
+        <ul>
+            <li>Understanding JSON arrays and their structure.</li>
+            <li>Adding, accessing, and modifying array elements.</li>
+        </ul>
+
+        <b>JSON Data Types:</b>
+        <ul>
+            <li>Detailed explanation of JSON data types.</li>
+            <li>Examples of each data type in JSON.</li>
+        </ul>
+
+        <b>Serialization and Deserialization:</b>
+        <ul>
+            <li>Serialization: Converting objects or data structures into JSON format.</li>
+            <li>Deserialization: Converting JSON data back into objects or data structures.</li>
+        </ul>
+
+        <b>Working with Nested JSON:</b>
+        <ul>
+            <li>Handling nested objects and arrays in JSON.</li>
+            <li>Accessing and manipulating nested data.</li>
+        </ul>
+
+        <b>JSON Schema:</b>
+        <ul>
+            <li>Introduction to JSON Schema.</li>
+            <li>Validating JSON data using JSON Schema.</li>
+        </ul>
+
+        <b>Parsing JSON:</b>
+        <ul>
+            <li>Parsing JSON data in different programming languages (JavaScript, Python, Java, etc.).</li>
+            <li>Handling JSON parsing errors and exceptions.</li>
+        </ul>
+
+        <b>Manipulating JSON with JavaScript:</b>
+        <ul>
+            <li>Using built-in JavaScript methods for working with JSON data.</li>
+            <li>Modifying JSON objects and arrays dynamically.</li>
+        </ul>
+
+    </div>
+    <!-- API CONTENT START---------------------------------------------->
+    <!-- XML CONTENT START---------------------------------------------->
+    <div class="content p-5" id="xml">
+        <span id="cross" onclick="undo('xml')">╳</span>
+        <h4 class="bg-warning p-3 text-center">XML</h4>
+        <b>Introduction to XML:</b>
+        <ul>
+            <li>Overview of XML and its purpose.</li>
+            <li>Comparison with other markup languages (HTML, JSON).</li>
+        </ul>
+
+        <b>XML Syntax:</b>
+        <ul>
+            <li>Basic syntax rules for XML.</li>
+            <li>Elements, attributes, and text nodes.</li>
+        </ul>
+
+        <b>XML Document Structure:</b>
+        <ul>
+            <li>Understanding the structure of an XML document.</li>
+            <li>Root element, child elements, and nesting.</li>
+        </ul>
+
+        <b>XML Declaration and Document Type Definition (DTD):</b>
+        <ul>
+            <li>Using the XML declaration to specify the XML version and encoding.</li>
+            <li>Defining document structure and data types using DTD.</li>
+        </ul>
+
+        <b>XML Namespaces:</b>
+        <ul>
+            <li>Understanding XML namespaces and their role in avoiding naming conflicts.</li>
+            <li>Declaring and using XML namespaces.</li>
+        </ul>
+
+        <b>XML Schema (XSD):</b>
+        <ul>
+            <li>Introduction to XML Schema Definition (XSD).</li>
+            <li>Defining data types, elements, and constraints in XML Schema.</li>
+        </ul>
+
+        <b>XML Processing Instructions:</b>
+        <ul>
+            <li>Using processing instructions to provide instructions to XML processors.</li>
+            <li>Examples of common processing instructions.</li>
+        </ul>
+
+        <b>XPath:</b>
+        <ul>
+            <li>Introduction to XPath (XML Path Language).</li>
+            <li>Selecting elements and attributes in an XML document using XPath expressions.</li>
+        </ul>
+
+        <b>XSLT (Extensible Stylesheet Language Transformations):</b>
+        <ul>
+            <li>Transforming XML documents into different formats using XSLT.</li>
+            <li>Applying stylesheets and templates to XML data.</li>
+        </ul>
+
+        <b>XML Parsing:</b>
+        <ul>
+            <li>Parsing XML documents in different programming languages (Java, Python, C#, etc.).</li>
+            <li>Using DOM (Document Object Model) and SAX (Simple API for XML) parsers.</li>
+        </ul>
+
+        <b>XML Serialization and Deserialization:</b>
+        <ul>
+            <li>Serializing objects or data structures into XML format.</li>
+            <li>Deserializing XML data back into objects or data structures.</li>
+        </ul>
+
+        <b>XML Validation:</b>
+        <ul>
+            <li>Validating XML documents against a DTD or XSD schema.</li>
+            <li>Handling validation errors and exceptions.</li>
+        </ul>
+
+        <b>XML Technologies for Web Services:</b>
+        <ul>
+            <li>Using XML-based technologies (SOAP, WSDL) for web services.</li>
+            <li>Building and consuming SOAP-based web services.</li>
+        </ul>
+
+        <b>XML and Database Integration:</b>
+        <ul>
+            <li>Storing and querying XML data in relational databases (XML databases).</li>
+            <li>Using XML in database management systems (XML data types, XQuery).</li>
+        </ul>
+
+    </div>
+
+    <!-- XML CONTENT START---------------------------------------------->
+    <!-- Authentication CONTENT START --------------------------------------->
+    <div class="content p-5" id="auth">
+        <span id="cross" onclick="undo('auth')">╳</span>
+        <h4 class="bg-warning p-3 text-center">Authentication</h4>
+        <p>Authentication is the process of verifying the identity of an individual, system, or entity attempting to
+            access a particular resource or service. It ensures that the user or system is who or what they claim to be
+            before granting access. Authentication is crucial for maintaining security and controlling access to
+            sensitive
+            information or systems.</p>
+        <b>Username and Password </b>
+        <p><b>Username :</b> A username is a unique identifier chosen by the user during the registration process. It's
+            typically
+            a string of characters that helps distinguish one user from another. Usernames are often displayed publicly
+            within a system, such as on a profile page or when interacting with other users.</p>
+        <p><b>Password :</b>A password is a confidential string of characters chosen by the user to prove their
+            identity.
+            It acts as a secret key that only the user should know. Passwords are kept private and should not be shared
+            with
+            others. They are used to authenticate the user's identity during login attempts.</p>
+        <b>OAuth :</b>
+        <p>OAuth (Open Authorization) is an open standard for access delegation commonly used as a means for websites or
+            applications to grant third-party access to resources without sharing passwords. It enables users to grant
+            access to their resources stored on one site to another site, without sharing their credentials (such as
+            username and password). OAuth is widely used by major companies like Google, Facebook, Twitter, and others
+            to
+            allow users to grant third-party access to their information.</p>
+        <b>Multi-Factor Authentication (MFA) :</b>
+        <p>Multi-Factor Authentication (MFA) is an authentication method that requires users to provide two or more
+            different factors to verify their identity before granting access to a system, application, or service. MFA
+            adds
+            an extra layer of security beyond just a username and password combination, making it more difficult for
+            unauthorized users to gain access.</p>
+        <b>JSON Web Tokens (JWT) :</b>
+        <p>JSON Web Tokens (JWT) are a compact, URL-safe means of representing claims to be transferred between two
+            parties. They are designed to be easy to use for both clients and servers, and they allow information to be
+            verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC
+            algorithm)
+            or a public/private key pair using RSA or ECDSA.</p>
+        <b>Session-based Authentication :</b>
+        <p>Session-based authentication is a method used by web applications to manage user authentication and
+            authorization. It relies on the concept of sessions, which are temporary storage areas created on the server
+            to
+            store user-specific information during a user's interaction with the application.</p>
+        <b>Time-based One-Time Passwords (TOTP) :</b>
+        <p>Time-based One-Time Passwords (TOTP) are a type of two-factor authentication (2FA) method commonly used to
+            enhance the security of online accounts and systems. TOTP relies on the generation of unique, time-based
+            codes
+            that are valid for only a short period of time and require the use of a shared secret between the user and
+            the
+            service provider.</p>
+        <b>Passwordless Authentication :</b>
+        <p>Passwordless authentication is a method of verifying a user's identity without requiring them to enter a
+            traditional password. Instead of relying solely on something the user knows (i.e., a password), passwordless
+            authentication methods typically use something the user has (e.g., a mobile device, email address) or
+            something
+            the user is (e.g., biometric data) to authenticate.</p>
+        <b>Brute Force Protection :</b>
+        <p>Brute force protection is a set of security measures implemented to prevent or mitigate brute force attacks.
+            In
+            a brute force attack, an attacker systematically tries all possible combinations of usernames, passwords, or
+            encryption keys until the correct one is found. Brute force attacks are typically automated and can be used
+            to
+            gain unauthorized access to systems, applications, or accounts.</p>
+    </div>
+    <!-- Authentication CONTENT END --------------------------------------->
+    <!-- STATUS CODE CONTENT START --------------------------------------->
+    <div class="content p-5" id="status">
+        <span id="cross" onclick="undo('status')">╳</span>
+        <h4 class="bg-warning p-3 text-center">Status Code</h4>
+        <p>
+            A status code is a numeric code that is sent by a server to a client as part of an HTTP response. It
+            indicates the result of the request made by the client to the server. Status codes are grouped into five
+            classes, each representing a different category of response. </p>
+        <b>Introduction to HTTP Status Codes:</b>
+        <ul>
+            <li>Overview of HTTP status codes and their significance.</li>
+            <li>Understanding the structure of an HTTP response.</li>
+        </ul>
+
+        <b>Informational Status Codes (1xx):</b>
+        <ul>
+            <li>Explanation of informational status codes (e.g., 100 Continue, 101 Switching Protocols).</li>
+            <li>Use cases and significance of these status codes.</li>
+        </ul>
+
+        <b>Success Status Codes (2xx):</b>
+        <ul>
+            <li>Explanation of success status codes (e.g., 200 OK, 201 Created).</li>
+            <li>Use cases and significance of these status codes.</li>
+        </ul>
+
+        <b>Redirection Status Codes (3xx):</b>
+        <ul>
+            <li>Explanation of redirection status codes (e.g., 301 Moved Permanently, 302 Found).</li>
+            <li>Use cases and significance of these status codes.</li>
+        </ul>
+
+        <b>Client Error Status Codes (4xx):</b>
+        <ul>
+            <li>Explanation of client error status codes (e.g., 400 Bad Request, 404 Not Found).</li>
+            <li>Common causes and troubleshooting tips for client errors.</li>
+        </ul>
+
+        <b>Server Error Status Codes (5xx):</b>
+        <ul>
+            <li>Explanation of server error status codes (e.g., 500 Internal Server Error, 503 Service Unavailable).
+            </li>
+            <li>Common causes and troubleshooting tips for server errors.</li>
+        </ul>
+
+        <b>Understanding Status Code Classes:</b>
+        <ul>
+            <li>Differentiating between status code classes (1xx, 2xx, 3xx, 4xx, 5xx).</li>
+            <li>Identifying the purpose and meaning of each class.</li>
+        </ul>
+
+        <b>Handling Status Codes in Web Development:</b>
+        <ul>
+            <li>Best practices for handling different status codes in web applications.</li>
+            <li>Implementing appropriate error handling and responses.</li>
+        </ul>
+
+        <b>Status Codes in RESTful APIs:</b>
+        <ul>
+            <li>Using status codes to indicate the outcome of RESTful API operations.</li>
+            <li>Mapping CRUD operations to status codes (e.g., POST -&gt; 201 Created, DELETE -&gt; 204 No Content).
+            </li>
+        </ul>
+
+        <b>Status Codes and SEO (Search Engine Optimization):</b>
+        <ul>
+            <li>Impact of status codes on search engine indexing and ranking.</li>
+            <li>Best practices for handling status codes to improve SEO.</li>
+        </ul>
+
+        <b>Status Code Extensions and Customization:</b>
+        <ul>
+            <li>Extending HTTP status codes for specific use cases.</li>
+            <li>Customizing status code responses in web applications.</li>
+        </ul>
+
+        <b>Status Code Tools and Testing:</b>
+        <ul>
+            <li>Tools for analyzing and testing HTTP status codes (e.g., cURL, Postman).</li>
+            <li>Writing test cases to validate status code responses.</li>
+        </ul>
+
+        <b>Monitoring and Alerting for Status Codes:</b>
+        <ul>
+            <li>Setting up monitoring and alerting systems to track status code occurrences.</li>
+            <li>Reacting to abnormal status code patterns.</li>
+        </ul>
+
+        <b>Status Code Documentation and Guidelines:</b>
+        <ul>
+            <li>Documenting status codes and their meanings in API documentation.</li>
+            <li>Establishing guidelines for consistent use and interpretation of status codes.</li>
+        </ul>
+
+        <b>Future Trends in Status Codes:</b>
+        <ul>
+            <li>Emerging trends and developments in status code usage.</li>
+            <li>Impact of new technologies (e.g., HTTP/3) on status codes.</li>
+        </ul>
+
+    </div>
+    <!-- STATUS CODE CONTENT END --------------------------------------->
 </body>
 <script src="./main.js"></script>
 
