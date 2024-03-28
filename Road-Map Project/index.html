@@ -2,11 +2,9 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Road-Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
   <script src="./bootstrap/js/bootstrap.min.js"></script>
   <link rel="icon" type="image/x-icon" href="./assets/icon.png" />
@@ -16,26 +14,24 @@
 
 <body>
   <div class="container">
-    <div class="header">
-      <div class="logo-box d-flex" onclick="home()">
-        <img src="./assets/icon.png" class="" alt="" />
-        <h3 class="pt-3 ms-2 text-primary">ROAD-MAP</h3>
-      </div>
-    <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-md-5 p-4 mt-5 mb-3">
-        <img src="./assets/user img.png" class="user position-absolute" alt="" />
-        <div class="h3">Login</div>
-        <p>Enter your credentials to login</p>
+    <div class="row px-4 d-flex justify-content-center align-items-center">
+      <div class="col-md-4 p-4 mb-3" id="colbox">
+        <div class="h3 mb-3 text-center">Login Account</div>
         <div class="card-body">
-          <form onsubmit="handleSubmit(event)">
-            <div class="form-outline1 mb-2">
+          <form onsubmit="handleLogin(event)">
+            <div class="form-outline mb-2">
               <label for="email" class="form-label">E-mail</label>
-              <input type="email" class="form-control ps-5" id="username" placeholder="Email" />
-              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <input type="email" class="form-control ps-5" id="username" name="email" placeholder="Email" required />
+              <i class="fa fa-envelope" id="em" aria-hidden="true"></i>
+              <span id="emailError" class="error-message  text-danger" style="display: none;">Please enter a valid
+                email
+                address.</span>
             </div>
-            <div class="form-outline2 mb-3">
+
+            <div class="form-outline mb-3">
               <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control ps-5" id="password" placeholder="Password" />
+              <input type="password" class="form-control ps-5" id="password" name="password" placeholder="Password"
+                required />
               <i class="fa fa-lock"></i>
             </div>
             <div class="d-grid justify-content-center">
@@ -52,50 +48,5 @@
   </div>
 </body>
 <script src="./main.js"></script>
-<!-- <script>
-  const users = [
-    {
-      id: 1,
-      username: "a@gmail.com",
-      password: "a@123"
-    },
-    {
-      id: 2,
-      username: "b@gmail.com",
-      password: "b@123"
-    },
-    {
-      id: 3,
-      username: "c@gmail.com",
-      password: "c@123"
-    }
-  ]
-  sessionStorage.setItem("users", JSON.stringify(users));
-  const DB = JSON.parse(sessionStorage.getItem("users"));
-  console.log(DB);
-
-  function handleSubmit(params) {
-    event.preventDefault();
-    const input = params.target;
-    console.log(input[0].value, input[1].value,"condition="+userNameCheck(input[0].value));
-    if (userNameCheck(input[0].value)) {
-      alert("login successfully")
-    }
-    else {
-      alert("user name not found!")
-    }
-  }
-  function userNameCheck(params) {
-    var userExist = false
-    DB.forEach(element => {
-      if (element.username === params) {
-        userExist= true;
-        
-      }
-    });
-    return userExist;
-
-  }
-</script> -->
 
 </html>

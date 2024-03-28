@@ -7,24 +7,29 @@
   <script src="./bootstrap/js/bootstrap.min.js"></script>
   <link rel="icon" type="image/x-icon" href="./assets/icon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
   <script src="main.js"></script>
 </head>
 
-<body onclick="refresh()">
-  <div class="container">
-    <div class="header">
-      <div class="logo-box d-flex" onclick="home()">
-        <img src="./assets/icon.png" class="logo-img" alt="" />
-        <h3 class="pt-3 ms-2 text-primary">ROAD-MAP</h3>
-      </div>
+<body>
+  <div class="header px-5">
+    <div class="logo-box d-flex" onclick="home()"></div>
+    <div class="right-side" id="rside">
+      <nav>
+        <span>About</span>
+        <span>courses</span>
+        <span>Contact</span>
+      </nav>
       <div class="login-btn">
-        <a href="./index.html" class="btn btn-primary">Login</a>
+        <a href="./index.html" class="btn">Login</a>
       </div>
     </div>
+    <i class="fa fa-bars" onclick="menu('rside')"></i>
+  </div>
+  <div class="container">
     <div class="h1 text-center my-5">Front-End</div>
     <!-- HTML CSS JS STRAT ------------------------------------------------------->
-    <div class="row mb-5">
+    <div class="row mb-5 ">
       <div class="col">
         <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('html')">
           HTML
@@ -51,10 +56,10 @@
         <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('git')">
           Git
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('gitlab')">
           GitLab
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('bitb')">
           BitBucket
         </p>
       </div>
@@ -65,10 +70,10 @@
         <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('npm')">
           npm
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('pnpm')">
           pnpm
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('yarn')">
           Yarn
         </p>
       </div>
@@ -77,7 +82,7 @@
 
     <!-- CSS PREPROCESSOR START ------------------------------------------------------>
     <hr />
-    <div class="row mb-5">
+    <div class="row mb-5 cssp">
       <div class="h4 mb-4">CSS Preprocessor</div>
       <p>
         CSS preprocessors are tools <b>that extend the capabilities of standard
@@ -90,13 +95,13 @@
         <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('sass')">
           SASS
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('less')">
           Less
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('stylus')">
           Stylus
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('postcss')">
           PostCSS
         </p>
       </div>
@@ -117,10 +122,10 @@
         <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('bs')">
           BootStrap
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('tw')">
           Tailwind
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('mater')">
           Materialize
         </p>
       </div>
@@ -132,10 +137,10 @@
         <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('rj')">
           React
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('aj')">
           Angular
         </p>
-        <p class="p d-flex justify-content-center align-items-center p-3">
+        <p class="p d-flex justify-content-center align-items-center p-3" onclick="content('vj')">
           Vue.js
         </p>
       </div>
@@ -162,250 +167,31 @@
     </div>
   </div>
   <hr />
-  <div class="footer  p-5 bg-primary text-white">
+  <div class="footer  p-5 text-white">
     <div class="row">
       <div class="col-3 others gen">
         <h2>Other Road-Maps</h3>
           <div class="list-box mt-2">
-            <div class="list">
+            <div class="list" onclick="location.href = './fe.html'">
               <a href="./fe.html"><b>Front-End</b><a>
-                  <a onclick="content('html')">HTML</a>
-                  <a onclick="content('css')">CSS</a>
-                  <a onclick="content('js')">JavaScript</a>
+                  <a>HTML</a>
+                  <a>CSS</a>
+                  <a>JavaScript</a>
             </div>
-            <div class="list">
+            <div class="list" onclick="location.href = './be.html'">
               <a href="./be.html"><b>Back-End</b></a>
-              <a onclick="content('java')">Java</a>
-              <a onclick="content('mysql')">MySQL</a>
-              <a onclick="content('api')">API</a>
+              <a>Java</a>
+              <a>MySQL</ak=>
+                <a>API</a>
             </div>
           </div>
       </div>
-      <!-- JAVA CONTENT START---------------------------------------------->
-      <div class="content p-5" id="java">
-        <span id="cross" onclick="undo('java')">╳</span>
-        <h4 class="bg-warning p-3 text-center">Java</h4>
-        <p>Java is a widely used, high-level, object-oriented programming language developed by Sun Microsystems
-          (now owned by Oracle Corporation). It was first released in 1995 and has since become one of the most
-          popular programming languages in the world.</p>
-        <p>Java is known for its platform independence, meaning that Java programs can run on any device or
-          operating system that has a Java Virtual Machine (JVM) installed, without needing to be recompiled. This
-          is achieved through the principle of "Write Once, Run Anywhere" (WORA).</p>
-        <b>Programming Concepts : </b>
-        <p>Familiarize yourself with fundamental programming concepts such as <b>variables, data types, control
-            structures (if statements, loops), functions/methods, and basic algorithms.</b> Even if you're new
-          to
-          programming, resources like online tutorials, books, and introductory courses can help you grasp these
-          concepts.
-        </p>
-        <b>Java Development Environment Setup :</b>
-        <p>Install a Java Development Kit (JDK) on your computer. The JDK includes
-          the Java compiler (javac), runtime environment (JRE), and other development tools necessary for writing
-          and
-          running Java programs. Popular choices for IDEs include IntelliJ IDEA, Eclipse, and NetBeans.</p>
-        <b>
-          <ul>Basic Concepts:
-        </b>
-        <li>Syntax and structure of the Java language</li>
-        <li>Collections framework (lists, sets, maps, queues)</li>
-        <li>Exception handling</li>
-        <li>Input/output (I/O) operations</li>
-        <li>Generics</li>
-        <li>Concurrency (threads, synchronization)</li>
-        </ul>
-        <b>
-          <ul>Core Java Libraries :
-        </b>
-        <li>String manipulation</li>
-        <li>Data types, variables, and operators</li>
-        <li>Control flow statements (if-else, loops)</li>
-        <li>Methods and functions</li>
-        <li>Object-oriented programming concepts (classes, objects, inheritance, polymorphism, encapsulation)</li>
-        </ul>
-        <b>
-          <ul>Advanced Java Concepts :
-        </b>
-        <li>Annotations and reflection</li>
-        <li>Serialization and deserialization</li>
-        <li>Lambda expressions and functional interfaces</li>
-        <li>Java Stream API for processing collections</li>
-        <li>Java Database Connectivity (JDBC) for database interaction</li>
-        <li>Java Virtual Machine (JVM) internals and memory management</li>
-        </ul>
-        <ul><b>Java Frameworks :</b>
-          <li>Spring Framework for building enterprise applications</li>
-          <li>Hibernate or other ORM (Object-Relational Mapping) frameworks</li>
-          <li>Apache Struts, Play Framework, or Java EE for web application development</li>
-        </ul>
-      </div>
-      <!-- JAVA CONTENT END---------------------------------------------->
-      <!-- MYSQL CONTENT START---------------------------------------------->
-      <div class="content p-5" id="mysql">
-        <span id="cross" onclick="undo('mysql')">╳</span>
-        <h4 class="bg-warning p-3 text-center">MySQL</h4>
-        <p>MySQL is an open-source relational database management system (RDBMS) that is widely used for managing
-          structured data. It was first released in 1995 by Swedish company MySQL AB and later acquired by Sun
-          Microsystems (now part of Oracle Corporation). MySQL is known for its reliability, performance, ease of
-          use, and scalability, making it one of the most popular database systems in the world.</p>
-        <section>
-          <b>Introduction to Relational Databases:</b>
-          <ul>
-            <li>Understanding the concepts of databases, tables, records, and fields</li>
-            <li>Overview of relational database management systems (RDBMS)</li>
-          </ul>
-        </section>
-
-        <section>
-          <b>MySQL Installation and Configuration:</b>
-          <ul>
-            <li>Installing MySQL server on different platforms (Windows, Linux, macOS)</li>
-            <li>Configuring MySQL server settings and options</li>
-          </ul>
-        </section>
-
-        <section>
-          <b>Database Design and Modeling:</b>
-          <ul>
-            <li>Entity-Relationship (ER) modeling</li>
-            <li>Normalization techniques (1NF, 2NF, 3NF, BCNF) for designing efficient databases</li>
-            <li>Creating tables with appropriate data types, constraints, and relationships</li>
-          </ul>
-        </section>
-
-        <section>
-          <b>SQL Basics:</b>
-          <ul>
-            <li>Writing SQL queries (SELECT, INSERT, UPDATE, DELETE)</li>
-            <li>Filtering and sorting data with WHERE and ORDER BY clauses</li>
-            <li>Grouping and aggregating data with GROUP BY and aggregate functions (SUM, AVG, COUNT, etc.)</li>
-            <li>Joining tables using INNER JOIN, LEFT JOIN, RIGHT JOIN, and OUTER JOIN</li>
-          </ul>
-        </section>
-
-        <section>
-          <b>Advanced SQL Queries:</b>
-          <ul>
-            <li>Subqueries (nested queries)</li>
-            <li>Set operations (UNION, INTERSECT, EXCEPT)</li>
-            <li>Conditional expressions (CASE statements)</li>
-            <li>Using stored procedures, functions, and triggers</li>
-          </ul>
-        </section>
-
-        <section>
-          <b>Indexes and Optimization:</b>
-          <ul>
-            <li>Understanding indexes and their types (e.g., B-tree, hash)</li>
-            <li>Creating and managing indexes for improving query performance</li>
-            <li>Query optimization techniques (e.g., EXPLAIN, analyzing query execution plans)</li>
-            <li>Optimizing database schema and table structures</li>
-          </ul>
-        </section>
-
-        <section>
-          <b>Transactions and Concurrency Control:</b>
-          <ul>
-            <li>Understanding transactions and ACID properties (Atomicity, Consistency, Isolation, Durability)</li>
-            <li>Managing transactions using COMMIT, ROLLBACK, and SAVEPOINT statements</li>
-            <li>Implementing concurrency control mechanisms (e.g., locking, isolation levels)</li>
-          </ul>
-        </section>
-
-        <section>
-          <b>MySQL Security:</b>
-          <ul>
-            <li>Authentication methods and user management</li>
-            <li>Granting and revoking privileges</li>
-            <li>Securing the MySQL server and data (e.g., encryption, SSL/TLS)</li>
-          </ul>
-        </section>
-      </div>
-      <!-- MYSQL CONTENT END---------------------------------------------->
-      <!-- API CONTENT END---------------------------------------------->
-      <div class="content p-5" id="api">
-        <span id="cross" onclick="undo('api')">╳</span>
-        <h4 class="bg-warning p-3 text-center">RESTFULL API</h4>
-        <b>Introduction to REST:</b>
-        <ul>
-          <li>Overview of Representational State Transfer (REST).</li>
-          <li>Key principles and constraints of RESTful architecture.</li>
-        </ul>
-
-        <b>HTTP Methods in RESTful APIs:</b>
-        <ul>
-          <li>Understanding the role of HTTP methods (GET, POST, PUT, DELETE, etc.).</li>
-          <li>Mapping CRUD operations to HTTP methods.</li>
-        </ul>
-
-        <b>URI Design in RESTful APIs:</b>
-        <ul>
-          <li>Best practices for designing URIs.</li>
-          <li>Resource naming conventions.</li>
-          <li>Hierarchical URI structures.</li>
-        </ul>
-
-        <b>Request and Response in RESTful APIs:</b>
-        <ul>
-          <li>Structure of HTTP requests and responses.</li>
-          <li>Headers, status codes, and message bodies.</li>
-          <li>Handling content types (JSON, XML).</li>
-        </ul>
-
-        <b>RESTful API Authentication:</b>
-        <ul>
-          <li>Authentication methods (Basic Auth, OAuth, JWT).</li>
-          <li>Securing RESTful APIs.</li>
-          <li>Token-based authentication.</li>
-        </ul>
-
-        <b>Versioning in RESTful APIs:</b>
-        <ul>
-          <li>Different strategies for API versioning.</li>
-          <li>Header versioning, URI versioning, and content negotiation.</li>
-        </ul>
-
-        <b>RESTful API Pagination:</b>
-        <ul>
-          <li>Implementing pagination for large datasets.</li>
-          <li>Query parameters for pagination.</li>
-          <li>Hypermedia as the Engine of Application State (HATEOAS).</li>
-        </ul>
-
-        <b>RESTful API Error Handling:</b>
-        <ul>
-          <li>Standardized error responses.</li>
-          <li>HTTP status codes for different scenarios.</li>
-          <li>Providing meaningful error messages.</li>
-        </ul>
-
-        <b>RESTful API Testing:</b>
-        <ul>
-          <li>Unit testing and integration testing of APIs.</li>
-          <li>Tools for API testing (Postman, RestAssured, etc.).</li>
-          <li>Writing effective test cases.</li>
-        </ul>
-
-        <b>RESTful API Documentation:</b>
-        <ul>
-          <li>Importance of documentation in RESTful APIs.</li>
-          <li>Tools for generating API documentation (Swagger, OpenAPI).</li>
-          <li>Writing clear and concise documentation.</li>
-        </ul>
-
-        <b>RESTful API Security:</b>
-        <ul>
-          <li>Common security threats and vulnerabilities.</li>
-          <li>Implementing SSL/TLS.</li>
-          <li>Cross-Origin Resource Sharing (CORS).</li>
-        </ul>
-
-      </div>
-      <!-- API CONTENT START---------------------------------------------->
       <div class="col-6 about gen">
         <h2>About</h2>
-        <p>It seems like you're asking for a roadmap. A roadmap typically refers to a strategic plan or guide that
-          outlines the steps needed to achieve a particular goal or objective. Since you haven't specified the topic
-          or
+        <p>It seems like you're asking for a roadmap. A roadmap typically refers to a strategic plan or guide
+          that
+          outlines the steps needed to achieve a particular goal or objective. Since you haven't specified the
+          topic or
           field, I'll provide a general roadmap for personal or professional development.</p>
       </div>
       <div class="col-3 gen">
@@ -418,13 +204,13 @@
       </div>
     </div>
   </div>
-  <div class="copy-rights text-center py-4 text-white" style="background-color: blue;">
+  <div class="copy-rights text-center py-4 text-white">
     <b>© Copyright 2021-2024 www.Road-Map.com. All rights reserved. Developed by Astronet.</b>
   </div>
   <!-- HTML CONTENT START -------------------------------------->
   <div class="content p-5" id="html">
     <span id="cross" onclick="undo('html')">╳</span>
-    <h4 class="bg-warning p-3 text-center">HTML</h4>
+    <h4 class="p-3 text-center">HTML</h4>
     <p>HTML, or Hypertext Markup Language, is the standard markup language for creating web pages and web
       applications. It provides a structure for the content on a webpage by using a series of elements, which are
       represented by tags enclosed in angle brackets <>. HTML tags tell the browser how to display the content,
@@ -460,7 +246,7 @@
   <!-- CSS CONTENT START --------------------------------->
   <div class="content p-5" id="css">
     <span id="cross" onclick="undo('css')">╳</span>
-    <h4 class="bg-warning p-3 text-center">CSS</h4>
+    <h4 class="p-3 text-center">CSS</h4>
     <p>CSS stands for Cascading Style Sheets. It is a style sheet language used to describe the presentation of a
       document written in a markup language like HTML. CSS defines how HTML elements should be displayed on screen, in
       print, or in other media types. It enables web developers to control the layout, colors, fonts, spacing, and
@@ -495,7 +281,7 @@
   <!-- JS CONTENT START --------------------------------->
   <div class="content p-5" id="js">
     <span id="cross" onclick="undo('js')">╳</span>
-    <h4 class="bg-warning p-3 text-center">JavaScript</h4>
+    <h4 class="p-3 text-center">JavaScript</h4>
     <p>JavaScript is a high-level, interpreted programming language primarily used for building dynamic and
       interactive websites. It is one of the core technologies of the World Wide Web, alongside HTML (Hypertext Markup
       Language) and CSS (Cascading Style Sheets). JavaScript allows developers to add functionality to web pages,
@@ -525,7 +311,7 @@
   <!-- GIT CONTENT START ------------------------------------->
   <div class="content p-5" id="git">
     <span id="cross" onclick="undo('git')">╳</span>
-    <h4 class="bg-warning p-3 text-center">GIT</h4>
+    <h4 class=" p-3 text-center">GIT</h4>
     <p> Git is a distributed version control system that enables developers to track changes, collaborate effectively,
       manage branches, and maintain the integrity of their codebase throughout the software development lifecycle.
     </p>
@@ -561,10 +347,190 @@
       provide support, and share best practices.</p>
   </div>
   <!-- GIT CONTENT END ------------------------------------->
+  <!-- GITLAB CONTENT START ------------------------------------->
+  <div class="content p-5" id="gitlab">
+    <span id="cross" onclick="undo('gitlab')">╳</span>
+    <h4 class=" p-3 text-center">GIT LAB</h4>
+    <p>
+      GitLab is a web-based DevOps lifecycle tool that provides a Git repository manager, continuous
+      integration/continuous deployment (CI/CD) pipelines, and various collaboration features. It offers a comprehensive
+      platform for managing software development projects, enabling teams to collaborate effectively, automate
+      workflows, and deliver high-quality software products efficiently.</p>
+    <b>Git Repository Management:</b>
+    <p>GitLab offers a Git repository hosting service, allowing teams to store, manage, and version control their
+      codebases. It provides features like branching, merging, tagging, and code reviews to facilitate collaboration
+      among developers.</p>
+
+    <b>Continuous Integration/Continuous Deployment (CI/CD):</b>
+    <p>GitLab includes built-in CI/CD pipelines that automate the process of building, testing, and deploying
+      applications. Developers can define workflows using YAML files, and GitLab executes these pipelines automatically
+      whenever code changes are pushed to the repository.</p>
+
+    <b>Issue Tracking and Project Management:</b>
+    <p>GitLab offers issue tracking tools that allow teams to create, assign, and prioritize tasks, track bugs, and
+      manage project backlogs. It also provides Kanban boards, milestone tracking, and time tracking features to help
+      teams manage their projects efficiently.</p>
+
+    <b>Code Review and Collaboration:</b>
+    <p>GitLab includes tools for code review and collaboration, such as inline commenting, merge requests, and code
+      snippets. These features facilitate peer code reviews, discussions, and knowledge sharing among team members.</p>
+
+    <b>Wiki and Documentation:</b>
+    <p>GitLab provides a built-in wiki feature that allows teams to create and maintain project documentation, guides,
+      and knowledge bases. It also supports Markdown formatting, making it easy to create rich and organized
+      documentation.</p>
+
+    <b>Security and Compliance:</b>
+    <p>GitLab includes security scanning and vulnerability management tools to help teams identify and remediate
+      security issues in their code. It also offers compliance features, such as audit logs and access controls, to
+      ensure regulatory compliance and data protection.</p>
+
+    <b>Integration and Extensibility:</b>
+    <p>GitLab integrates with a wide range of third-party tools and services, including issue trackers, chat
+      applications, monitoring tools, and cloud providers. It also provides APIs and webhooks for custom integrations
+      and automation.</p>
+
+  </div>
+  <!-- GITLAB CONTENT END ------------------------------------->
+  <!-- BitBucket CONTENT START ------------------------------------->
+  <div class="content p-5" id="bitb">
+    <span id="cross" onclick="undo('bitb')">╳</span>
+    <h4 class=" p-3 text-center">BitBucket</h4>
+    <p>
+      Bitbucket is a web-based platform for hosting and managing Git repositories. It provides a collaborative
+      environment for software development teams to work on projects, manage code repositories, and streamline their
+      development workflows. Originally created by Atlassian, Bitbucket offers both cloud-based and self-hosted options,
+      providing flexibility for different types of organizations and projects.</p>
+    <b>Git Repository Hosting:</b>
+    <p>Bitbucket allows users to create unlimited Git repositories to store and version control their codebases. It
+      supports both public and private repositories, enabling teams to collaborate securely on proprietary projects.</p>
+
+    <b>Code Collaboration:</b>
+    <p>Bitbucket facilitates collaboration among team members through features like pull requests, inline commenting,
+      and code reviews. Developers can review each other's code, provide feedback, and suggest improvements to ensure
+      code quality and maintainability.</p>
+
+    <b>Branching and Merging:</b>
+    <p>Bitbucket supports advanced branching and merging capabilities, allowing teams to work on multiple features or
+      bug fixes simultaneously without interfering with each other's work. It provides tools for managing branches,
+      resolving conflicts, and merging changes back into the main codebase.</p>
+
+    <b>Continuous Integration/Continuous Deployment (CI/CD):</b>
+    <p>Bitbucket integrates seamlessly with popular CI/CD tools like Jenkins, Bamboo, and Bitbucket Pipelines. It allows
+      teams to automate the process of building, testing, and deploying applications, ensuring rapid and reliable
+      delivery of software updates.</p>
+
+    <b>Issue Tracking and Project Management:</b>
+    <p>Bitbucket includes built-in issue tracking and project management tools to help teams organize their work, track
+      tasks, and prioritize feature development. It provides Kanban boards, customizable workflows, and integration with
+      Jira for comprehensive project management.</p>
+
+    <b>Security and Permissions:</b>
+    <p>Bitbucket offers robust security features, including granular access controls, two-factor authentication (2FA),
+      and IP whitelisting, to protect sensitive code and data. It also provides audit logs and compliance features to
+      meet regulatory requirements and industry standards.</p>
+
+    <b>Integration Ecosystem:</b>
+    <p>Bitbucket integrates seamlessly with a wide range of third-party tools and services, including project management
+      tools, CI/CD platforms, code analysis tools, and chat applications. It provides APIs and webhooks for custom
+      integrations and automation.</p>
+
+  </div>
+  <!-- BitBucket CONTENT END ------------------------------------->
+  <!-- PNPM CONTENT START ------------------------------------->
+  <div class="content p-5" id="pnpm">
+    <span id="cross" onclick="undo('pnpm')">╳</span>
+    <h4 class=" p-3 text-center">PNPM</h4>
+    <p>PNPM is a package manager for JavaScript projects. It stands for "Plug'n'Play Node Package Manager". PNPM
+      provides an alternative approach to package management compared to traditional package managers like npm or Yarn.
+      Here's a brief overview of PNPM</p>
+    <b>Plug'n'Play:</b>
+    <p>PNPM introduces the concept of "Plug'n'Play", which allows packages to be installed in a global store rather than
+      being duplicated in each project's <code>node_modules</code> directory. This reduces disk space usage and speeds
+      up installation and dependency resolution.</p>
+
+    <b>Efficient Disk Usage:</b>
+    <p>By using a global store for packages, PNPM eliminates duplicate packages across multiple projects. This results
+      in significant savings in disk space, especially when working on multiple projects with overlapping dependencies.
+    </p>
+
+    <b>Faster Installations:</b>
+    <p>PNPM's approach to package management typically leads to faster installation times compared to traditional
+      package managers. Since packages are shared across projects, there's no need to download and install duplicate
+      copies of the same package for each project.</p>
+
+    <b>Workspace Support:</b>
+    <p>PNPM provides support for managing monorepos or workspaces, where multiple related projects are stored in a
+      single repository. It allows you to install dependencies for all projects within the workspace efficiently.</p>
+
+    <b>Compatibility:</b>
+    <p>PNPM is fully compatible with existing npm and Yarn workflows. It supports common package management commands
+      such as <code>install</code>, <code>update</code>, <code>remove</code>, and <code>list</code>, making it easy to
+      switch to PNPM without significant changes to your development workflow.</p>
+
+    <b>Integrity Checks:</b>
+    <p>PNPM performs integrity checks to ensure that dependencies are installed correctly and securely. It verifies the
+      integrity of packages in the global store to prevent tampering or corruption.</p>
+
+    <b>Community Support:</b>
+    <p>PNPM is an open-source project with an active community of contributors and users. It receives regular updates
+      and improvements, ensuring compatibility with the latest JavaScript ecosystem trends and best practices.</p>
+
+  </div>
+  <!-- PNPM CONTENT END ------------------------------------->
+  <!-- YARN CONTENT START -->
+  <div class="content p-5" id="yarn">
+    <span id="cross" onclick="undo('yarn')">╳</span>
+    <h4 class=" p-3 text-center">YARN</h4>
+    <p>
+      Yarn is a package manager for JavaScript projects. It was developed by Facebook and is widely used in the
+      JavaScript ecosystem for managing dependencies efficiently. Yarn provides several features that streamline the
+      process of package management and improve the performance of dependency resolution. Here's an overview of Yarn's
+      key features</p>
+    <b>Fast and Reliable:</b>
+    <p>Yarn is known for its speed and reliability. It uses a global cache to store downloaded packages, reducing the
+      need to download dependencies repeatedly. Yarn also parallelizes package installations, resulting in faster
+      dependency resolution and installation times.</p>
+
+    <b>Deterministic Dependency Resolution:</b>
+    <p>Yarn ensures deterministic dependency resolution by using a lock file (<code>yarn.lock</code>). This file
+      specifies the exact versions of all dependencies and ensures that the same dependencies are installed across
+      different environments or machines, preventing unexpected behavior due to version mismatches.</p>
+
+    <b>Offline Mode:</b>
+    <p>Yarn provides an offline mode that allows developers to install dependencies without an internet connection. By
+      caching packages locally, Yarn enables developers to work on projects offline or in environments with limited
+      internet access.</p>
+
+    <b>Workspaces:</b>
+    <p>Yarn supports workspaces, which are useful for managing monorepos or multi-package repositories. Workspaces allow
+      developers to link multiple packages within a single repository and manage their dependencies collectively. This
+      simplifies development workflows and improves code organization.</p>
+
+    <b>Plug'n'Play (PnP):</b>
+    <p>Yarn introduced Plug'n'Play (PnP) as an experimental feature to improve package resolution and reduce disk space
+      usage. PnP eliminates the need for a <code>node_modules</code> directory by resolving packages at runtime. This
+      results in faster startup times and reduced disk space usage.</p>
+
+    <b>Interactive CLI:</b>
+    <p>Yarn provides an interactive command-line interface (CLI) with helpful prompts and suggestions. The interactive
+      CLI makes it easier for developers to navigate through commands, manage dependencies, and troubleshoot issues
+      effectively.</p>
+
+    <b>Extensibility:</b>
+    <p>Yarn is highly extensible and supports plugins that enhance its functionality. Developers can create custom
+      plugins to integrate Yarn with other tools or add new features to suit their specific requirements.</p>
+
+    <b>Community Support:</b>
+    <p>Yarn has a vibrant community of developers and contributors who actively maintain and improve the project. The
+      community provides support, documentation, and resources to help users get the most out of Yarn and address any
+      issues they encounter.</p>
+
+  </div>
   <!-- npm CONTENT START ------------------------------------->
   <div class="content p-5" id="npm">
     <span id="cross" onclick="undo('npm')">╳</span>
-    <h4 class="bg-warning p-3 text-center">NPM</h4>
+    <h4 class=" p-3 text-center">NPM</h4>
     <p>NPM (Node Package Manager) is a package manager for Node.js, a runtime environment for executing JavaScript
       code outside a web browser. While Git is a version control system that helps developers manage changes to their
       codebase, NPM complements Git by providing a way to manage project dependencies, scripts, and configurations.
@@ -602,7 +568,7 @@
   <!-- SASS CONTENT START ------------------------------------->
   <div class="content p-5" id="sass">
     <span id="cross" onclick="undo('sass')">╳</span>
-    <h4 class="bg-warning p-3 text-center">SASS</h4>
+    <h4 class="p-3 text-center">SASS</h4>
     <p>Sass (Syntactically Awesome Style Sheets) is a preprocessor scripting language that extends CSS with additional
       features like variables, nesting, mixins, functions, and more. While CSS is powerful on its own, Sass enhances
       the capabilities of CSS and offers several benefits for web developers</p>
@@ -636,11 +602,118 @@
       a compiler or preprocessor, ensuring compatibility with all web browsers.</p>
   </div>
   <!-- SASS CONTENT START ------------------------------------->
+  <!-- LESS CONTENT ST -->
+  <div class="content p-5" id="less">
+    <span id="cross" onclick="undo('less')">╳</span>
+    <h4 class=" p-3 text-center">LESS</h4>
+    <li>LESS is a dynamic stylesheet language that extends CSS with features like variables, mixins, and nesting, making
+      it easier to write and maintain stylesheets for web development.</li>
+    <ul>
+      <li><b>Variables:</b> LESS allows you to define variables to store reusable values such as colors, font sizes, or
+        spacing, making it easier to maintain consistency across stylesheets.</li>
+      <li><b>Mixins:</b> Mixins are reusable blocks of styles that can be included in other selectors. They enable code
+        reuse and help avoid repetition in stylesheets.</li>
+      <li><b>Nesting:</b> LESS supports nesting of CSS selectors, allowing you to write cleaner and more organized
+        stylesheets by grouping related styles together within the hierarchy of selectors.</li>
+      <li><b>Functions:</b> LESS provides built-in functions and allows you to define custom functions to perform
+        calculations, manipulate colors, and apply transformations to styles.</li>
+      <li><b>Operations:</b> LESS supports arithmetic operations, enabling you to perform calculations directly within
+        stylesheets, such as adding, subtracting, multiplying, or dividing values.</li>
+      <li><b>Importing:</b> LESS allows you to split stylesheets into smaller, modular files and import them into other
+        stylesheets, making it easier to organize and manage large codebases.</li>
+      <li><b>Extend/Inheritance:</b> LESS provides the @extend directive, which allows you to share styles between
+        selectors, similar to inheritance in object-oriented programming, reducing redundancy in stylesheets.</li>
+      <li><b>Comments:</b> LESS supports both single-line (//) and multi-line (/* */) comments, allowing you to add
+        documentation and annotations to stylesheets.</li>
+    </ul>
+    </li>
+    <li><b>Usage:</b> LESS is commonly used in web development projects to streamline the process of writing and
+      maintaining CSS stylesheets. It can be integrated into build processes using task runners or module bundlers like
+      webpack.</li>
+    <li><b>Tools:</b> There are several tools and editors that support LESS, including official compilers like less.js
+      and third-party tools like Prepros, CodeKit, and gulp-less.</li>
+    </ul>
+  </div>
+  <!-- LESS CONTENT END -->
+  <!-- Styleus con st-->
+  <div class="content p-5" id="stylus">
+    <span id="cross" onclick="undo('stylus')">╳</span>
+    <h4 class=" p-3 text-center">Stylus</h4>
+    <ul>
+      <li>Stylus is a dynamic stylesheet preprocessor for CSS that offers a concise and expressive syntax. It is
+        designed to enhance CSS authoring by providing features like variables, mixins, and nested selectors.</li>
+      <ul>
+        <li><b>Variables:</b> Stylus allows you to define variables to store values such as colors, font sizes, or
+          spacing. Variables can be reused throughout the stylesheet, making it easier to maintain consistency and make
+          global changes.</li>
+        <li><b>Mixins:</b> Mixins are reusable blocks of CSS properties and values that can be included within other
+          selectors. They enable code reuse and help reduce duplication by encapsulating common styles.</li>
+        <li><b>Nested Selectors:</b> Stylus supports nested selectors, allowing you to write CSS rules in a hierarchical
+          structure. This feature helps improve readability and maintainability by organizing related styles within the
+          context of their parent selectors.</li>
+        <li><b>Control Directives:</b> Stylus provides control directives such as conditionals and loops, which allow
+          you to apply styles dynamically based on conditions or iterate over sets of data. This adds flexibility and
+          power to your stylesheet logic.</li>
+        <li><b>Functions:</b> Stylus allows you to define custom functions to perform calculations, manipulate values,
+          or generate CSS dynamically. Functions can be used to abstract complex logic and create reusable style
+          utilities.</li>
+        <li><b>Operators:</b> Stylus supports various operators for performing arithmetic, logical, and comparison
+          operations within stylesheets. Operators enable you to manipulate values and properties dynamically based on
+          conditions or calculations.</li>
+        <li><b>Importing:</b> Stylus allows you to split stylesheets into smaller, modular files and import them into
+          other stylesheets. This helps organize code into manageable units and facilitates code reuse across projects.
+        </li>
+        <li><b>Comments:</b> Stylus supports both single-line (//) and multi-line (/* */) comments, allowing you to add
+          documentation and annotations to your stylesheets.</li>
+      </ul>
+      </li>
+      <li><b>Usage:</b> Stylus is commonly used in web development projects to streamline CSS authoring and improve
+        productivity. It can be integrated into build processes using task runners like Gulp or module bundlers like
+        webpack.</li>
+      <li><b>Tools:</b> There are several tools and editors that support Stylus, including official compilers like
+        Stylus CLI and third-party plugins for popular text editors like Visual Studio Code and Sublime Text.</li>
+    </ul>
+  </div>
+  <!-- Styleus Con END -->
+  <!-- PostCSS ST -->
+  <div class="content p-5" id="postcss">
+    <span id="cross" onclick="undo('postcss')">╳</span>
+    <h4 class=" p-3 text-center">POST CSS</h4>
+    <p>PostCSS is a tool for transforming CSS with JavaScript plugins. It allows developers to automate tasks, apply
+      modern CSS features, and optimize stylesheets using a plugin-based architecture.</p>
+    <ul>
+      <li><b>Plugin Architecture:</b> PostCSS operates on a plugin-based architecture, allowing developers to extend and
+        customize its functionality by installing and configuring plugins. Plugins can perform a wide range of tasks,
+        such as adding vendor prefixes, optimizing styles, and even transforming CSS with JavaScript.</li>
+      <li><b>Modern CSS Support:</b> PostCSS enables developers to use modern CSS features that may not be widely
+        supported by browsers yet, such as CSS variables, custom properties, nesting, and custom media queries. Plugins
+        can polyfill or transform these features to ensure compatibility across browsers.</li>
+      <li><b>Autoprefixer:</b> Autoprefixer is one of the most popular PostCSS plugins, which automatically adds vendor
+        prefixes to CSS properties based on the specified browser support. This helps ensure cross-browser compatibility
+        without the need for manual prefixing.</li>
+      <li><b>CSS Optimization:</b> PostCSS plugins can optimize CSS stylesheets by removing unused CSS, minifying code,
+        and reducing file size. Optimization plugins improve website performance by reducing page load times and
+        improving rendering speed.</li>
+      <li><b>Customization:</b> PostCSS offers extensive customization options through its plugin ecosystem. Developers
+        can choose from a wide range of plugins to tailor PostCSS to their specific needs, whether it's adding new
+        features, optimizing workflows, or enforcing coding standards.</li>
+      <li><b>Integration:</b> PostCSS integrates seamlessly with existing build tools and workflows. It can be used
+        alongside task runners like Gulp or module bundlers like webpack to automate CSS processing tasks and streamline
+        the development workflow.</li>
+      <li><b>Performance:</b> PostCSS is designed for performance, with a focus on speed and efficiency. It processes
+        CSS files quickly, even when working with large codebases or complex transformations, making it suitable for use
+        in production environments.</li>
+      <li><b>Community Support:</b> PostCSS has a vibrant community of developers and contributors who actively maintain
+        and improve the project. The community provides a wide range of plugins, tutorials, and resources to help users
+        get started with PostCSS and leverage its full potential.</li>
+    </ul>
+  </div>
+  <!-- PostCSS END -->
   <!-- CSS PREPROCESSOR END ------------------------------------------------------>
   <!-- BOOTSTRAP CONTENT START ------------------------------------->
   <div class="content p-5" id="bs">
     <span id="cross" onclick="undo('bs')">╳</span>
-    <h4 class="bg-warning p-3 text-center">BootStrap</h4>
+    <h4 class=" p-3 text-center">BootStrap</h4>
     <p>Bootstrap is a popular front-end framework that simplifies the process of building responsive, mobile-first web
       applications. It provides developers with a collection of pre-designed components, layouts, and utilities, along
       with a responsive grid system and extensive CSS styling. Here are several reasons why Bootstrap is commonly used
@@ -681,11 +754,75 @@
   </div>
 
   <!-- BOOTSTRAP CONTENT END ------------------------------------->
-
+  <!-- TaAILWIND ST -->
+  <div class="content p-5" id="tw">
+    <span id="cross" onclick="undo('tw')">╳</span>
+    <h4 class="p-3 text-center">TAILWIND</h4>
+    <p>Tailwind CSS is a utility-first CSS framework that provides a set of pre-designed utility classes to quickly
+      build modern and responsive web interfaces. Unlike traditional CSS frameworks, Tailwind CSS does not come with
+      pre-styled components but focuses on providing low-level utility classes that can be composed together to create
+      custom designs.</p>
+    <ul>
+      <li><b>Utility-First Approach:</b> Tailwind CSS follows a utility-first approach, where styles are applied using
+        utility classes directly in HTML markup. This approach eliminates the need for writing custom CSS rules and
+        allows developers to quickly apply styles without repeating code.</li>
+      <li><b>Modular and Composable:</b> Tailwind CSS is designed to be modular and composable, allowing developers to
+        combine utility classes to create custom designs. By composing classes together, developers can build complex
+        layouts and components with minimal effort.</li>
+      <li><b>Responsive Design:</b> Tailwind CSS includes built-in support for responsive design, with a range of
+        utility classes for creating responsive layouts and components. Developers can easily apply responsive
+        breakpoints and adjust styles for different screen sizes without writing media queries.</li>
+      <li><b>Customization:</b> Tailwind CSS provides extensive customization options through configuration files.
+        Developers can customize colors, typography, spacing, and other design tokens to match the branding and design
+        requirements of their projects.</li>
+      <li><b>Optimized for Performance:</b> Tailwind CSS is optimized for performance, with a small file size and
+        minimal CSS output. By using utility classes, Tailwind CSS avoids generating unused styles and reduces the
+        overall size of CSS files, resulting in faster loading times for web pages.</li>
+      <li><b>Developer Experience:</b> Tailwind CSS offers a rich developer experience with features like IntelliSense
+        support, code completion, and documentation integration in popular code editors. This improves productivity and
+        makes it easier for developers to work with Tailwind CSS in their projects.</li>
+      <li><b>Active Community and Ecosystem:</b> Tailwind CSS has a large and active community of developers who
+        contribute plugins, extensions, and resources to the ecosystem. The community provides support, tutorials, and
+        best practices to help developers learn and adopt Tailwind CSS in their projects.</li>
+    </ul>
+  </div>
+  <!-- TAILWIND END -->
+  <!-- Materialize ST -->
+  <div class="content p-5" id="mater">
+    <span id="cross" onclick="undo('mater')">╳</span>
+    <h4 class="p-3 text-center">MATERIALIZE</h4>
+    <p>Materialize is a modern responsive front-end framework based on Google's Material Design guidelines. It provides
+      a set of pre-designed UI components, styles, and JavaScript functionality to create visually appealing and
+      consistent web interfaces.</p>
+    <ul>
+      <li><b>Material Design Components:</b> Materialize offers a wide range of Material Design-inspired UI components,
+        including buttons, forms, cards, navigation bars, and more. These components come with pre-defined styles and
+        interactive behavior, making it easy to build modern web applications.</li>
+      <li><b>Responsive Layout:</b> Materialize is built with responsive design principles in mind, ensuring that web
+        applications look and function well across different devices and screen sizes. It provides a responsive grid
+        system and utilities for creating flexible and adaptive layouts.</li>
+      <li><b>Customization:</b> Materialize allows developers to customize the look and feel of their web applications
+        using built-in theming options. Developers can modify colors, typography, and other design elements to match the
+        branding and design requirements of their projects.</li>
+      <li><b>JavaScript Components:</b> Materialize includes JavaScript components and utilities to add interactivity
+        and dynamic behavior to web interfaces. These components enable features such as modals, dropdowns, sliders, and
+        collapsible elements, enhancing the user experience.</li>
+      <li><b>Documentation and Resources:</b> Materialize provides comprehensive documentation, tutorials, and resources
+        to help developers get started with the framework. The documentation includes usage guidelines, code examples,
+        and API references for each component and feature.</li>
+      <li><b>Compatibility:</b> Materialize is compatible with modern web browsers and supports the latest HTML, CSS,
+        and JavaScript standards. It is designed to work seamlessly with popular front-end development tools and
+        frameworks, making it easy to integrate into existing projects.</li>
+      <li><b>Active Community and Support:</b> Materialize has a thriving community of developers who contribute
+        plugins, extensions, and resources to the ecosystem. The community provides support, forums, and
+        community-driven projects to help developers learn and adopt Materialize in their projects.</li>
+    </ul>
+  </div>
+  <!-- Materialize END -->
   <!-- REACT CONTENT START ------------------------------------->
   <div class="content p-5" id="rj">
     <span id="cross" onclick="undo('rj')">╳</span>
-    <h4 class="bg-warning p-3 text-center">REACT JS</h4>
+    <h4 class="p-3 text-center">REACT JS</h4>
     <p>React.js is a JavaScript library developed by Facebook for building user interfaces, particularly for
       single-page applications and complex user interfaces. It has gained widespread adoption in the web development
       community due to several key features and benefits</p>
@@ -725,11 +862,83 @@
       options for building modern web applications.</p>
   </div>
   <!-- REACT CONTENT END --------------------------------------->
-  <!-- CSS FRAMEWORKS END ------------------------------------------------------>
+  <!-- AngularJS ST -->
+  <div class="content p-5" id="aj">
+    <span id="cross" onclick="undo('aj')">╳</span>
+    <h4 class="p-3 text-center">Angular JS</h4>
+    <p>AngularJS is an open-source JavaScript framework developed by Google for building dynamic web applications. It
+      extends HTML with additional attributes and directives to create rich and interactive user interfaces. AngularJS
+      follows the Model-View-Controller (MVC) architecture and promotes modular and reusable code.</p>
+    <ul>
+      <li><b>Data Binding:</b> AngularJS provides two-way data binding, which synchronizes the data between the model
+        and the view automatically. Any changes to the model are reflected in the view, and vice versa, without the need
+        for manual DOM manipulation.</li>
+      <li><b>Directives:</b> AngularJS introduces directives, which are HTML attributes or elements that extend the
+        functionality of HTML. Directives allow developers to create custom behaviors, such as looping through arrays,
+        conditionally rendering elements, and manipulating the DOM.</li>
+      <li><b>Dependency Injection:</b> AngularJS uses dependency injection to manage dependencies between different
+        components of an application. This promotes loose coupling and makes components more reusable and testable.</li>
+      <li><b>Modular Design:</b> AngularJS encourages a modular design approach, where applications are divided into
+        small, reusable components called modules. Modules encapsulate related functionality and can be easily combined
+        to build complex applications.</li>
+      <li><b>Routing:</b> AngularJS includes a built-in routing module that allows developers to define navigation paths
+        and load different views based on the URL. This enables the creation of single-page applications (SPAs) with
+        multiple views and a fluid user experience.</li>
+      <li><b>Services:</b> AngularJS provides services, which are singleton objects that perform specific tasks, such as
+        making HTTP requests, managing authentication, or caching data. Services promote code reuse and encapsulate
+        common functionality.</li>
+      <li><b>Testing Support:</b> AngularJS is designed with testability in mind and provides support for unit testing
+        and end-to-end testing. The framework includes tools like Jasmine and Protractor for writing and running tests,
+        ensuring the reliability and quality of applications.</li>
+      <li><b>Community and Ecosystem:</b> AngularJS has a large and active community of developers who contribute
+        plugins, extensions, and resources to the ecosystem. The community provides support, tutorials, and best
+        practices to help developers learn and adopt AngularJS in their projects.</li>
+    </ul>
+  </div>
+  <!-- AngularJS END -->
+  <!-- VueJS ST -->
+  <div class="content p-5" id="vj">
+    <span id="cross" onclick="undo('vj')">╳</span>
+    <h4 class="p-3 text-center">VUE JS</h4>
+    <p>Vue.js is a progressive JavaScript framework used for building user interfaces. It is designed from the ground up
+      to be incrementally adoptable, allowing developers to add Vue.js to existing projects or use it to build new
+      applications entirely. Vue.js is known for its simplicity, flexibility, and reactivity.</p>
+    <ul>
+      <li><b>Declarative Rendering:</b> Vue.js uses a template-based syntax that allows developers to declaratively
+        define the UI components and their behavior. This makes it easy to understand and write HTML-based views without
+        the need for complex JavaScript logic.</li>
+      <li><b>Component-Based Architecture:</b> Vue.js promotes a component-based architecture, where applications are
+        divided into reusable and composable components. Components encapsulate HTML, CSS, and JavaScript logic, making
+        them self-contained and easier to manage.</li>
+      <li><b>Reactivity:</b> Vue.js implements a reactive data-binding system, which automatically updates the DOM when
+        the underlying data changes. This allows developers to build dynamic and interactive user interfaces without
+        manually manipulating the DOM.</li>
+      <li><b>Virtual DOM:</b> Vue.js uses a virtual DOM to efficiently update the real DOM. The virtual DOM is a
+        lightweight representation of the actual DOM, which Vue.js uses to compute the minimal number of changes needed
+        to update the UI, resulting in improved performance.</li>
+      <li><b>Vue CLI:</b> Vue.js provides a command-line interface (CLI) tool called Vue CLI for scaffolding and
+        managing Vue.js projects. Vue CLI offers features like project generation, development server, build
+        optimization, and plugin support, streamlining the development process.</li>
+      <li><b>Vue Router:</b> Vue.js comes with Vue Router, a routing library for building single-page applications
+        (SPAs). Vue Router allows developers to define navigation routes, load different views based on the URL, and
+        manage application state seamlessly.</li>
+      <li><b>Vuex:</b> Vue.js integrates with Vuex, a state management pattern and library, for managing application
+        state in large-scale Vue.js applications. Vuex provides a centralized store for storing and managing shared data
+        across components, enabling predictable state management.</li>
+      <li><b>Server-Side Rendering (SSR):</b> Vue.js supports server-side rendering (SSR), allowing developers to render
+        Vue.js applications on the server and send pre-rendered HTML to the client. SSR improves performance, search
+        engine optimization (SEO), and initial load times for Vue.js applications.</li>
+      <li><b>Community and Ecosystem:</b> Vue.js has a vibrant community of developers who contribute plugins,
+        components, and resources to the ecosystem. The community provides extensive documentation, tutorials, and
+        support to help developers learn and adopt Vue.js in their projects.</li>
+    </ul>
+  </div>
+  <!-- VueJS END -->
+  <!-- JS FRAMEWORKS END ------------------------------------------------------>
   <!-- INTERNET CONTENT START --------------------------------------->
   <div class="content p-5" id="inter">
     <span id="cross" onclick="undo('inter')">╳</span>
-    <h4 class="bg-warning p-3 text-center">INTERNET</h4>
+    <h4 class="p-3 text-center">INTERNET</h4>
     <b>What is domain name ?</b>
     <p>A domain name is a human-readable label that serves as an easy-to-remember address for locating resources on
       the internet. It is used to identify and locate specific websites, web pages, email servers, and other internet
@@ -812,7 +1021,7 @@
   <!-- Authentication CONTENT START --------------------------------------->
   <div class="content p-5" id="auth">
     <span id="cross" onclick="undo('auth')">╳</span>
-    <h4 class="bg-warning p-3 text-center">Authentication</h4>
+    <h4 class="p-3 text-center">Authentication</h4>
     <p>Authentication is the process of verifying the identity of an individual, system, or entity attempting to
       access a particular resource or service. It ensures that the user or system is who or what they claim to be
       before granting access. Authentication is crucial for maintaining security and controlling access to sensitive
@@ -865,7 +1074,7 @@
   <!-- SECURITY CONTENT START --------------------------------------->
   <div class="content p-5" id="sec">
     <span id="cross" onclick="undo('sec')">╳</span>
-    <h4 class="bg-warning p-3 text-center">Web Security</h4>
+    <h4 class="p-3 text-center">Web Security</h4>
     <p>Web security refers to the protection of websites, web applications, and web services from various online
       threats, vulnerabilities, and attacks. Ensuring web security is essential for safeguarding sensitive data,
       maintaining user trust, and preventing unauthorized access or malicious activities. Here are some key aspects of

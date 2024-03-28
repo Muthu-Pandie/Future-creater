@@ -7,43 +7,47 @@
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <link rel="icon" type="image/x-icon" href="./assets/icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
     <script src="main.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo-box d-flex" onclick="home()">
-                <img src="./assets/icon.png" class="" alt="" />
-                <h3 class="pt-3 ms-2 text-primary">ROAD-MAP</h3>
-            </div>
+    <div class="header px-5">
+        <div class="logo-box d-flex" onclick="home()"></div>
+        <div class="right-side" id="rside">
+            <nav>
+                <span>About</span>
+                <span>courses</span>
+                <span>Contact</span>
+            </nav>
             <div class="login-btn">
-                <a href="./index.html" class="btn btn-primary">Login</a>
+                <a href="./index.html" class="btn">Login</a>
             </div>
         </div>
+        <i class="fa fa-bars" onclick="menu('rside')"></i>
+    </div>
+    <div class="container">
         <div class="h1 text-center my-5">Developer Roadmaps</div>
         <div class="row mb-4">
             <div class="col d-flex justify-content-center gap-4">
-                <a href="./fe.html">
-                    <p class="p d-flex justify-content-center align-items-center p-3">
-                        Front-End
-                    </p>
-                </a>
-                <a href="./be.html">
-                    <p class="p d-flex justify-content-center align-items-center p-3">
-                        Back-End
-                    </p>
-                </a>
-                <p class="p d-flex justify-content-center align-items-center p-3">
-                    DevOps
+
+                <p onclick="location.href='./fe.html'" id="fe"
+                    class="p d-flex justify-content-center align-items-center p-3">
+                    Front-End
+                </p>
+                <p onclick="location.href='./be.html'" id="be"
+                    class="p d-flex justify-content-center align-items-center p-3">
+                    Back-End
+                </p>
+                <p class="p d-flex justify-content-center align-items-center p-3" onclick="fullStack('fe', 'be')">
+                    Full-Stack
                 </p>
             </div>
         </div>
         <div class="row mb-4">
             <div class="col d-flex justify-content-center gap-4">
                 <p class="p d-flex justify-content-center align-items-center p-3">
-                    Full-Stack
+                    DevOps
                 </p>
                 <p class="p d-flex justify-content-center align-items-center p-3">
                     Android
@@ -107,397 +111,25 @@
         </div>
     </div>
     <hr>
-    <div class="footer  p-5 bg-primary text-white">
+    <div class="footer  p-5 text-white">
         <div class="row">
             <div class="col-3 others gen">
                 <h2>Other Road-Maps</h3>
                     <div class="list-box mt-2">
-                        <div class="list">
+                        <div class="list" onclick="location.href = './fe.html'">
                             <a href="./fe.html"><b>Front-End</b><a>
-                                    <a onclick="content('html')">HTML</a>
-                                    <a onclick="content('css')">CSS</a>
-                                    <a onclick="content('js')">JavaScript</a>
+                                    <a>HTML</a>
+                                    <a>CSS</a>
+                                    <a>JavaScript</a>
                         </div>
-                        <!-- HTML CONTENT START -------------------------------------->
-                        <div class="content p-5" id="html">
-                            <span id="cross" onclick="undo('html')">╳</span>
-                            <h4 class="bg-warning p-3 text-center">HTML</h4>
-                            <p>HTML, or Hypertext Markup Language, is the standard markup language for creating web
-                                pages and web
-                                applications. It provides a structure for the content on a webpage by using a series of
-                                elements, which are
-                                represented by tags enclosed in angle brackets <>. HTML tags tell the browser how to
-                                    display the content,
-                                    whether it's text, images, links, or other media.</p>
-                            <p><b>1. Elements:</b> HTML documents are made up of elements, which are the building blocks
-                                of the webpage. Each
-                                element
-                                consists of an opening tag, content, and a closing tag. For example:
-                            <p class="text-center bg-secondary text-white p-2">&lt;p&gt;This is a paragraph in
-                                HTML.&lt;/p&gt;</p>
-                            </p>
-                            <p><b>2. Attributes:</b> HTML elements can have attributes that provide additional
-                                information about the element.
-                                Attributes are specified within the opening tag and usually come in name-value pairs.
-                                For example:
-                            <p class="text-center bg-secondary text-white p-2">&lt;a href=""&gt;Attributes in
-                                HTML&lt;/a&gt;</p>
-                            </p>
-                            <p><b>3. Tags:</b> HTML tags define the structure and content of the webpage. Some common
-                                tags include:
-                            <ul>
-                                <li>&lt;html&gt;: Defines the root of an HTML document.</li>
-                                <li>&lt;head&gt;: Contains metadata about the document, such as the title and links to
-                                    stylesheets.</li>
-                                <li>&lt;title&gt;: Sets the title of the document, which appears in the browser's title
-                                    bar or tab.</li>
-                                <li>&lt;body&gt;: Contains the content of the document, such as text, images, links, and
-                                    other elements.</li>
-                                <li>&lt;p&gt;: Defines a paragraph.</li>
-                                <li>&lt;a&gt;: Defines a hyperlink.</li>
-                                <li>&lt;img&gt;: Inserts an image.</li>
-                                <li>&lt;div&gt;: Defines a division or section in a document.</li>
-                                <li>&lt;span&gt;: Defines a section of text within another element.</li>
-                                <li>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;: Used to create unordered and ordered lists.</li>
-                            </ul>
-                            </p>
-                            <p><b>4. Document Structure:</b><br>
-                                <img src="./assets/html-tag-structure-image.png" class="con-img pt-4" alt="">
-                            </p>
-                        </div>
-                        <!-- HTML CONTENT END --------------------------------->
-                        <!-- CSS CONTENT START --------------------------------->
-                        <div class="content p-5" id="css">
-                            <span id="cross" onclick="undo('css')">╳</span>
-                            <h4 class="bg-warning p-3 text-center">CSS</h4>
-                            <p>CSS stands for Cascading Style Sheets. It is a style sheet language used to describe the
-                                presentation of a
-                                document written in a markup language like HTML. CSS defines how HTML elements should be
-                                displayed on screen, in
-                                print, or in other media types. It enables web developers to control the layout, colors,
-                                fonts, spacing, and
-                                other visual aspects of a web page or application.</p>
-                            <b>Presentation : </b>
-                            <p> CSS is used to control the visual presentation of web pages. It allows developers to
-                                define styles for
-                                elements such as fonts, colors, spacing, layout, and more. By separating the structure
-                                (HTML) from the
-                                presentation (CSS), developers can create visually appealing and consistent designs
-                                across multiple pages.</p>
-                            <b>Responsive Design : </b>
-                            <p> CSS enables the creation of responsive web designs that adapt to different screen sizes
-                                and devices. Media
-                                queries in CSS allow developers to apply different styles based on factors like screen
-                                width, enabling websites
-                                to be optimized for desktops, tablets, and smartphones.</p>
-                            <b>Layout Control : </b>
-                            <p>CSS provides powerful layout capabilities, allowing developers to control the positioning
-                                and arrangement of
-                                elements on a web page. This includes techniques such as flexbox and grid layout, which
-                                offer more advanced and
-                                flexible options for creating complex layouts compared to traditional methods.</p>
-                            <b>Accessibility : </b>
-                            <p> CSS can be used to improve the accessibility of web content by providing styles that
-                                enhance readability,
-                                navigation, and usability for users with disabilities. For example, CSS can be used to
-                                define high-contrast
-                                color schemes, provide alternative text for images, and ensure proper focus management
-                                for keyboard navigation.
-                            </p>
-                            <b>Performance Optimization :</b>
-                            <p>CSS can help improve the performance of web pages by reducing the size of the files that
-                                need to be downloaded
-                                by the browser. By externalizing styles into separate CSS files and minimizing
-                                redundancy, developers can ensure
-                                faster loading times and improved user experience.</p>
-                            <b>Browser Compatibility :</b>
-                            <p>CSS helps ensure consistency in how web pages are displayed across different web
-                                browsers. While browsers may
-                                have their own default styles, CSS allows developers to override these styles and apply
-                                consistent styling
-                                across all browsers, ensuring a uniform experience for users.</p>
-                        </div>
-                        <!-- CSS CONTENT END --------------------------------->
-                        <!-- JS CONTENT START --------------------------------->
-                        <div class="content p-5" id="js">
-                            <span id="cross" onclick="undo('js')">╳</span>
-                            <h4 class="bg-warning p-3 text-center">JavaScript</h4>
-                            <p>JavaScript is a high-level, interpreted programming language primarily used for building
-                                dynamic and
-                                interactive websites. It is one of the core technologies of the World Wide Web,
-                                alongside HTML (Hypertext Markup
-                                Language) and CSS (Cascading Style Sheets). JavaScript allows developers to add
-                                functionality to web pages,
-                                enabling features such as dynamic content updates, interactive forms, multimedia
-                                playback, and more.</p>
-                            <b>Client-Side Interactivity : </b>
-                            <p>JavaScript allows for dynamic and interactive web pages. It enables you to create
-                                features such as form validation, interactive maps, sliders, dropdown menus, and much
-                                more, enhancing user
-                                experience.</p>
-                            <b>Asynchronous Communication :</b>
-                            <p> JavaScript facilitates asynchronous communication with servers using AJAX (Asynchronous
-                                JavaScript and XML).
-                                This enables web pages to make requests to the server without reloading the entire page,
-                                resulting in faster and
-                                smoother user experiences.</p>
-                            <b>Cross-Browser Compatibility : </b>
-                            <p> JavaScript is supported by all major web browsers, making it a reliable choice for
-                                developing web applications
-                                that work consistently across different browsers and platforms.</p>
-                            <b>Rich User Interfaces : </b>
-                            <p> With JavaScript frameworks and libraries like React, Angular, and Vue.js, developers can
-                                build rich and
-                                responsive user interfaces, allowing for complex single-page applications (SPAs) that
-                                rival traditional desktop
-                                applications in terms of functionality and performance.</p>
-                            <b>Server-Side Development : </b>
-                            <p> With the advent of Node.js, JavaScript can now be used for server-side development as
-                                well. This enables
-                                developers to use a single language (JavaScript) for both client-side and server-side
-                                programming, streamlining
-                                the development process and reducing </p>
-                        </div>
-                        <!-- JS CONTENT END --------------------------------->
-                        <!-- HTML CSS JS END -------------------------------------------------------->
-                        <div class="list">
+                        <div class="list" onclick="location.href = './be.html'">
                             <a href="./be.html"><b>Back-End</b></a>
-                            <a onclick="content('java')">Java</a>
-                            <a onclick="content('mysql')">MySQL</a>
-                            <a onclick="content('api')">API</a>
+                            <a>Java</a>
+                            <a>MySQL</ak=>
+                                <a>API</a>
                         </div>
                     </div>
             </div>
-            <!-- JAVA CONTENT START---------------------------------------------->
-            <div class="content p-5" id="java">
-                <span id="cross" onclick="undo('java')">╳</span>
-                <h4 class="bg-warning p-3 text-center">Java</h4>
-                <p>Java is a widely used, high-level, object-oriented programming language developed by Sun Microsystems
-                    (now owned by Oracle Corporation). It was first released in 1995 and has since become one of the
-                    most
-                    popular programming languages in the world.</p>
-                <p>Java is known for its platform independence, meaning that Java programs can run on any device or
-                    operating system that has a Java Virtual Machine (JVM) installed, without needing to be recompiled.
-                    This
-                    is achieved through the principle of "Write Once, Run Anywhere" (WORA).</p>
-                <b>Programming Concepts : </b>
-                <p>Familiarize yourself with fundamental programming concepts such as <b>variables, data types, control
-                        structures (if statements, loops), functions/methods, and basic algorithms.</b> Even if you're
-                    new
-                    to
-                    programming, resources like online tutorials, books, and introductory courses can help you grasp
-                    these
-                    concepts.
-                </p>
-                <b>Java Development Environment Setup :</b>
-                <p>Install a Java Development Kit (JDK) on your computer. The JDK includes
-                    the Java compiler (javac), runtime environment (JRE), and other development tools necessary for
-                    writing
-                    and
-                    running Java programs. Popular choices for IDEs include IntelliJ IDEA, Eclipse, and NetBeans.</p>
-                <b>
-                    <ul>Basic Concepts:
-                </b>
-                <li>Syntax and structure of the Java language</li>
-                <li>Collections framework (lists, sets, maps, queues)</li>
-                <li>Exception handling</li>
-                <li>Input/output (I/O) operations</li>
-                <li>Generics</li>
-                <li>Concurrency (threads, synchronization)</li>
-                </ul>
-                <b>
-                    <ul>Core Java Libraries :
-                </b>
-                <li>String manipulation</li>
-                <li>Data types, variables, and operators</li>
-                <li>Control flow statements (if-else, loops)</li>
-                <li>Methods and functions</li>
-                <li>Object-oriented programming concepts (classes, objects, inheritance, polymorphism, encapsulation)
-                </li>
-                </ul>
-                <b>
-                    <ul>Advanced Java Concepts :
-                </b>
-                <li>Annotations and reflection</li>
-                <li>Serialization and deserialization</li>
-                <li>Lambda expressions and functional interfaces</li>
-                <li>Java Stream API for processing collections</li>
-                <li>Java Database Connectivity (JDBC) for database interaction</li>
-                <li>Java Virtual Machine (JVM) internals and memory management</li>
-                </ul>
-                <ul><b>Java Frameworks :</b>
-                    <li>Spring Framework for building enterprise applications</li>
-                    <li>Hibernate or other ORM (Object-Relational Mapping) frameworks</li>
-                    <li>Apache Struts, Play Framework, or Java EE for web application development</li>
-                </ul>
-            </div>
-            <!-- JAVA CONTENT END---------------------------------------------->
-            <!-- MYSQL CONTENT START---------------------------------------------->
-            <div class="content p-5" id="mysql">
-                <span id="cross" onclick="undo('mysql')">╳</span>
-                <h4 class="bg-warning p-3 text-center">MySQL</h4>
-                <p>MySQL is an open-source relational database management system (RDBMS) that is widely used for
-                    managing
-                    structured data. It was first released in 1995 by Swedish company MySQL AB and later acquired by Sun
-                    Microsystems (now part of Oracle Corporation). MySQL is known for its reliability, performance, ease
-                    of
-                    use, and scalability, making it one of the most popular database systems in the world.</p>
-                <section>
-                    <b>Introduction to Relational Databases:</b>
-                    <ul>
-                        <li>Understanding the concepts of databases, tables, records, and fields</li>
-                        <li>Overview of relational database management systems (RDBMS)</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <b>MySQL Installation and Configuration:</b>
-                    <ul>
-                        <li>Installing MySQL server on different platforms (Windows, Linux, macOS)</li>
-                        <li>Configuring MySQL server settings and options</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <b>Database Design and Modeling:</b>
-                    <ul>
-                        <li>Entity-Relationship (ER) modeling</li>
-                        <li>Normalization techniques (1NF, 2NF, 3NF, BCNF) for designing efficient databases</li>
-                        <li>Creating tables with appropriate data types, constraints, and relationships</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <b>SQL Basics:</b>
-                    <ul>
-                        <li>Writing SQL queries (SELECT, INSERT, UPDATE, DELETE)</li>
-                        <li>Filtering and sorting data with WHERE and ORDER BY clauses</li>
-                        <li>Grouping and aggregating data with GROUP BY and aggregate functions (SUM, AVG, COUNT, etc.)
-                        </li>
-                        <li>Joining tables using INNER JOIN, LEFT JOIN, RIGHT JOIN, and OUTER JOIN</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <b>Advanced SQL Queries:</b>
-                    <ul>
-                        <li>Subqueries (nested queries)</li>
-                        <li>Set operations (UNION, INTERSECT, EXCEPT)</li>
-                        <li>Conditional expressions (CASE statements)</li>
-                        <li>Using stored procedures, functions, and triggers</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <b>Indexes and Optimization:</b>
-                    <ul>
-                        <li>Understanding indexes and their types (e.g., B-tree, hash)</li>
-                        <li>Creating and managing indexes for improving query performance</li>
-                        <li>Query optimization techniques (e.g., EXPLAIN, analyzing query execution plans)</li>
-                        <li>Optimizing database schema and table structures</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <b>Transactions and Concurrency Control:</b>
-                    <ul>
-                        <li>Understanding transactions and ACID properties (Atomicity, Consistency, Isolation,
-                            Durability)</li>
-                        <li>Managing transactions using COMMIT, ROLLBACK, and SAVEPOINT statements</li>
-                        <li>Implementing concurrency control mechanisms (e.g., locking, isolation levels)</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <b>MySQL Security:</b>
-                    <ul>
-                        <li>Authentication methods and user management</li>
-                        <li>Granting and revoking privileges</li>
-                        <li>Securing the MySQL server and data (e.g., encryption, SSL/TLS)</li>
-                    </ul>
-                </section>
-            </div>
-            <!-- MYSQL CONTENT END---------------------------------------------->
-            <!-- API CONTENT END---------------------------------------------->
-            <div class="content p-5" id="api">
-                <span id="cross" onclick="undo('api')">╳</span>
-                <h4 class="bg-warning p-3 text-center">RESTFULL API</h4>
-                <b>Introduction to REST:</b>
-                <ul>
-                    <li>Overview of Representational State Transfer (REST).</li>
-                    <li>Key principles and constraints of RESTful architecture.</li>
-                </ul>
-
-                <b>HTTP Methods in RESTful APIs:</b>
-                <ul>
-                    <li>Understanding the role of HTTP methods (GET, POST, PUT, DELETE, etc.).</li>
-                    <li>Mapping CRUD operations to HTTP methods.</li>
-                </ul>
-
-                <b>URI Design in RESTful APIs:</b>
-                <ul>
-                    <li>Best practices for designing URIs.</li>
-                    <li>Resource naming conventions.</li>
-                    <li>Hierarchical URI structures.</li>
-                </ul>
-
-                <b>Request and Response in RESTful APIs:</b>
-                <ul>
-                    <li>Structure of HTTP requests and responses.</li>
-                    <li>Headers, status codes, and message bodies.</li>
-                    <li>Handling content types (JSON, XML).</li>
-                </ul>
-
-                <b>RESTful API Authentication:</b>
-                <ul>
-                    <li>Authentication methods (Basic Auth, OAuth, JWT).</li>
-                    <li>Securing RESTful APIs.</li>
-                    <li>Token-based authentication.</li>
-                </ul>
-
-                <b>Versioning in RESTful APIs:</b>
-                <ul>
-                    <li>Different strategies for API versioning.</li>
-                    <li>Header versioning, URI versioning, and content negotiation.</li>
-                </ul>
-
-                <b>RESTful API Pagination:</b>
-                <ul>
-                    <li>Implementing pagination for large datasets.</li>
-                    <li>Query parameters for pagination.</li>
-                    <li>Hypermedia as the Engine of Application State (HATEOAS).</li>
-                </ul>
-
-                <b>RESTful API Error Handling:</b>
-                <ul>
-                    <li>Standardized error responses.</li>
-                    <li>HTTP status codes for different scenarios.</li>
-                    <li>Providing meaningful error messages.</li>
-                </ul>
-
-                <b>RESTful API Testing:</b>
-                <ul>
-                    <li>Unit testing and integration testing of APIs.</li>
-                    <li>Tools for API testing (Postman, RestAssured, etc.).</li>
-                    <li>Writing effective test cases.</li>
-                </ul>
-
-                <b>RESTful API Documentation:</b>
-                <ul>
-                    <li>Importance of documentation in RESTful APIs.</li>
-                    <li>Tools for generating API documentation (Swagger, OpenAPI).</li>
-                    <li>Writing clear and concise documentation.</li>
-                </ul>
-
-                <b>RESTful API Security:</b>
-                <ul>
-                    <li>Common security threats and vulnerabilities.</li>
-                    <li>Implementing SSL/TLS.</li>
-                    <li>Cross-Origin Resource Sharing (CORS).</li>
-                </ul>
-
-            </div>
-            <!-- API CONTENT START---------------------------------------------->
             <div class="col-6 about gen">
                 <h2>About</h2>
                 <p>It seems like you're asking for a roadmap. A roadmap typically refers to a strategic plan or guide
@@ -516,7 +148,7 @@
             </div>
         </div>
     </div>
-    <div class="copy-rights text-center py-4 text-white" style="background-color: blue;">
+    <div class="copy-rights text-center py-4 text-white">
         <b>© Copyright 2021-2024 www.Road-Map.com. All rights reserved. Developed by Astronet.</b>
     </div>
 </body>
